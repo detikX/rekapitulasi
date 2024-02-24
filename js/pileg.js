@@ -221,7 +221,7 @@ cekChart().then((values) => {
     const ctx = document.getElementById('myChart');
 
     new Chart(ctx, {
-        type: 'doughnut',
+        type: 'bar',
         data: {
             // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
             labels: values.semuaObj,
