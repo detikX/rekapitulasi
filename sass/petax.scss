@@ -1,0 +1,81 @@
+.petax {
+    .gallery {
+        display:flex;	
+      //   outline:1px solid red;
+        // background: #ccc;
+        @media screen and (max-width:768px) {
+          
+        }
+      }
+      
+      .left {
+          width:50%;
+          @media screen and (max-width:768px) {
+              // width: 60%;
+          }
+      }
+      
+      .detailsWrapper {
+          margin:auto;
+          width:80%;
+      }
+      
+      .details {
+          height:100vh;
+          // outline:1px solid green;
+          display:flex;
+          flex-direction:column;
+          justify-content:center;
+      }
+      
+      
+      .right {
+          // outline:1px solid purple;
+          width:50%;
+          height:100vh;
+          display:flex;
+          flex-direction:column;
+          justify-content:center;
+          @media screen and (max-width:768px) {
+              // width: 100% !important;
+          }
+      }
+      
+      .photos {
+          width:40vw;
+          height:40vw;
+          // background:maroon;
+          position:relative;
+          @media screen and (max-width:768px) {
+              width: 65vw;
+              height: 80vh;
+          }
+      }
+      
+      .photo {
+          padding: 24px;
+          position:absolute;
+          width:100%;
+          height:100%;
+          @media screen and (max-width:768px) {
+              padding: 0;
+          }
+          img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+          }
+      }
+      
+      .red {
+          background: #b9e7f2;
+      }
+      
+      .green {
+          background:#b9e7f2;
+      }
+      
+      .blue {
+          background:#b9e7f2;
+      }
+}

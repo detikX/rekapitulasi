@@ -1,0 +1,39 @@
+.pileg {
+    background: white;
+    h3 {
+        font-size: 3rem;
+        color:black;
+    }
+
+    .select2-selection--single {
+        height: 40px !important;
+    }
+    .select2-selection__rendered {
+        line-height: 38px !important;
+    }
+
+    .nama-nama {
+        display: block;
+        .ceks {
+            display: inline-block;
+            width: 23%;
+            border: 1px solid;
+            padding: 8px;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            // height: 120px;
+            min-height: 150px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: top;
+
+        }
+    }
+
+    thead {
+        th {
+            font-size: 12px !important;
+        }
+    }
+}
