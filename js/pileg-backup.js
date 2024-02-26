@@ -78,28 +78,28 @@ $.ajax({
 })
 
 
-$.ajax({
-    url: 'https://sirekap-obj-data.kpu.go.id/pemilu/partai.json',
-    method: 'GET',
-    success: function (response) {
-        // console.log('partai', typeof response);
+// $.ajax({
+//     url: 'https://sirekap-obj-data.kpu.go.id/pemilu/partai.json',
+//     method: 'GET',
+//     success: function (response) {
+//         // console.log('partai', typeof response);
 
-        var array = $.map(response, function (value, index) {
-            return [value];
-        });
-        // console.log(array);
-        var c;
-        for (c = 0; c < array.length; c++) {
-            var nama = array[c].nama;
-            // console.log(nama);
-            $(".nama-nama").append(
-                `
-                    <div class="ceks">${nama}</div>
-                `
-            )
-        }
-    }
-});
+//         var array = $.map(response, function (value, index) {
+//             return [value];
+//         });
+//         // console.log(array);
+//         var c;
+//         for (c = 0; c < array.length; c++) {
+//             var nama = array[c].nama;
+//             // console.log(nama);
+//             $(".nama-nama").append(
+//                 `
+//                     <div class="ceks">${nama}</div>
+//                 `
+//             )
+//         }
+//     }
+// });
 
 
 
@@ -138,67 +138,152 @@ $.ajax({
 
 
 
+
+
+// https://www.youtube.com/watch?v=oFLnXT7D4gc
 // https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/1101.json
-$("#set").click(() => {
-    // var value_ = $(".daerah").val();
-    // var real = parseInt(value_)
-    // var newVal = real + 1
-    var url_ = 'https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/0.json'
-    // var url_ = `https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/${newVal}.json`
-    // alert(newVal)
 
-    $.ajax({
-        url: url_,
-        method: 'GET',
-        // beforeSend: function() {
-        //     $("#loading").show();
-        //     $('.alquran').hide();
-        //     $('.judul').hide()
-        // },
-        // complete: function() {
-        //     $("#loading").hide();
-        //     $('.alquran').show();
-        //     $('.judul').show()
-        // },
-        success: ((response) => {
-            var x;
-            // var nilai = $('.daerah').find(":selected").val();
-            // console.log(nilai);
-            // var daerahLength = $('.daerah > option').length;
-            // for (x = 0; x < daerahLength; x++) {
-            //     var titik = nilai[;
-            //     console.log(titik);
-            // }
+var url_ = 'https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/0.json'
+function cekChart() {
+    var semuaObj = [];
+    var semuaKey = [];
+    var semuaTable = [];
+    return new Promise(function (resolve) {
+        $.ajax({
+            url: url_,
+            method: 'GET',
+            // beforeSend: function() {
+            //     $("#loading").show();
+            //     $('.alquran').hide();
+            //     $('.judul').hide()
+            // },
+            // complete: function() {
+            //     $("#loading").hide();
+            //     $('.alquran').show();
+            //     $('.judul').show()
+            // },
+            success: ((response) => {
+                var c = Object.values(response)[2];
+                // var haha = Object.keys(response.table);
 
 
 
-            // console.log('nilai', nilai);
+                // var table_dpr = Object.values(response.table);
+                var table_dpr = response.table;
+                //push table dpr
+                // var q;
+                // for (q = 0; q < table_dpr.length; q++) {
+                //     table_dpr = table_dpr[q];
+                // }
+                semuaTable.push(table_dpr)
+                // console.log(semuaTable);
+
+                var x;
+
+                for (let key in c) {
+                    var monthWording = {
+                        '1': 'PKB',
+                        '2': 'Gerindra',
+                        '3': 'PDI P',
+                        '4': 'Golkar',
+                        '5': 'Nasdem',
+                        '6': 'Partai Buruh',
+                        '7': 'Gelora',
+                        '8': 'PKS',
+                        '9': 'PKN',
+                        '10': 'Hanura',
+                        '11': 'Garuda',
+                        '12': 'PAN',
+                        '13': 'PBB',
+                        '14': 'Demokrat',
+                        '15': 'PSI',
+                        '16': 'Perindo',
+                        '17': 'PPP',
+                        '24': 'Partai Ummat',
+                    }
+                    var key_ = c[key];
+                    var cobaNama = `${monthWording[key]}`;
+
+                    // semuaTable.push(table_dpr)
+                    semuaKey.push(key_)
+                    semuaObj.push(cobaNama)
+
+                    // console.log(cobaNama);
+                    resolve(
+                        {
+                            semuaKey, semuaObj, semuaTable
+                        }
+                    )
+                }
 
 
-
-            var c = Object.values(response.table)[0];
-            // var semua = c + [nilai];
-            console.log('c', c);
-            console.log(response.table);
-
-            var d = Object.values(c)[0];
-
-            Object.keys(c).map(function (key) {
-                // return c[key];
-                return (
-                    $(".nama-nama .ceks").append(`
-                    <div>
-                        ${c[key]}
-                    </div>
-                `)
-                )
-            });
-            // $(".nama-nama .ceks").append(`
-            //     <div>
-            //         ${c[24]}
-            //     </div>
-            // `)
-
+            })
         })
+
     })
+}
+
+// chartJS()
+
+
+
+
+
+
+// cekChart().then((resChart) => {
+//     console.log(resChart)
+// })
+
+cekChart().then((values) => {
+    console.log(values);
+    // console.log('values.semuaKey', values.semuaKey);
+    // console.log('values.semuaKey', values.semuaObj);
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: values.semuaObj,
+            datasets: [{
+                label: 'Suara',
+                data: values.semuaKey,
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 206, 86)',
+                    'rgb(75, 192, 192)',
+                    'rgb(153, 102, 255)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    //click table
+    $("#set").click(() => {
+        var cs = 0;
+        var nilai = $('.daerah').find(":selected").val();
+        var tablex = values.semuaTable[0];
+        var cek = Object.values(tablex)[`${cs}`];
+
+        console.log('nilai', tablex);
+
+    })
+});
+
+
+$(document).ready(function () {
+
+    // cekChart()
+
 })
+

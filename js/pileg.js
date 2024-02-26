@@ -143,7 +143,87 @@ $.ajax({
 // https://www.youtube.com/watch?v=oFLnXT7D4gc
 // https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/1101.json
 
-var url_ = 'https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/0.json'
+var url_ = 'https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/0.json';
+
+//click table
+// function tableList() {
+// return new Promise(function (resolvetable) {
+$("#set").click(() => {
+    $.ajax({
+        url: url_,
+        type: 'GET',
+        success: function (response) {
+
+            var semuaTable = [];
+            var allKey = [];
+            var allObj = [];
+
+            $('.partai').html('');
+            $('.suara').html('');
+            var c = Object.values(response)[2];
+            // console.log('c', c);
+            for (let key in c) {
+                var monthWording = {
+                    '1': 'PKB',
+                    '2': 'Gerindra',
+                    '3': 'PDI P',
+                    '4': 'Golkar',
+                    '5': 'Nasdem',
+                    '6': 'Partai Buruh',
+                    '7': 'Gelora',
+                    '8': 'PKS',
+                    '9': 'PKN',
+                    '10': 'Hanura',
+                    '11': 'Garuda',
+                    '12': 'PAN',
+                    '13': 'PBB',
+                    '14': 'Demokrat',
+                    '15': 'PSI',
+                    '16': 'Perindo',
+                    '17': 'PPP',
+                    '24': 'Partai Ummat',
+                    'persen': 'Persen'
+                }
+                // var key_ = c[key];
+                var cobaNama = `${monthWording[key]}`;
+                console.log('key_', cobaNama);
+                // semuaTable.push(table_dpr)
+
+                // console.log(allKey, allObj);
+                $(".nama-nama .cardx .partai").append(`
+                    <div >${cobaNama}</div>
+                `)
+
+            }
+
+            var nilai = $('.daerah').find(":selected").val();
+            // var tablex = values.semuaTable[0];
+            // console.log('nilai', nilai);
+
+            var table_dpr = response.table[nilai];
+            //push table dpr
+            semuaTable.push(table_dpr);
+            var objVal = Object.values(table_dpr)
+
+            console.log('table dpr', objVal);
+
+            var t;
+            for (t = 0; t < objVal.length; t++) {
+                var iterate_data = objVal[t];
+                $(".nama-nama .cardx .suara").append(`
+                        <div >${iterate_data}</div>
+                `)
+            }
+
+
+
+        }
+
+    })
+
+})
+// })
+//}
 function cekChart() {
     var semuaObj = [];
     var semuaKey = [];
@@ -163,7 +243,9 @@ function cekChart() {
             // },
             success: ((response) => {
                 var c = Object.values(response)[2];
-                var haha = Object.keys(response.table);
+
+
+
                 var x;
 
                 for (let key in c) {
@@ -190,6 +272,7 @@ function cekChart() {
                     var key_ = c[key];
                     var cobaNama = `${monthWording[key]}`;
 
+                    // semuaTable.push(table_dpr)
                     semuaKey.push(key_)
                     semuaObj.push(cobaNama)
 
@@ -201,23 +284,23 @@ function cekChart() {
                     )
                 }
 
-                // chartJS()
-                // var nilai = $('.daerah').find(":selected").val();
+
             })
         })
 
     })
 }
 
+// chartJS()
 
-// cekChart().then((resChart) => {
-//     console.log(resChart)
-// })
 
+
+
+//Promise chart
 cekChart().then((values) => {
     // console.log(values);
-    console.log('values.semuaKey', values.semuaKey);
-    console.log('values.semuaKey', values.semuaObj);
+    // console.log('values.semuaKey', values.semuaKey);
+    // console.log('values.semuaKey', values.semuaObj);
     const ctx = document.getElementById('myChart');
 
     new Chart(ctx, {
@@ -226,8 +309,15 @@ cekChart().then((values) => {
             // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
             labels: values.semuaObj,
             datasets: [{
-                label: '# of Votes',
+                label: 'Suara',
                 data: values.semuaKey,
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 206, 86)',
+                    'rgb(75, 192, 192)',
+                    'rgb(153, 102, 255)'
+                ],
                 borderWidth: 1
             }]
         },
@@ -242,6 +332,10 @@ cekChart().then((values) => {
     });
 });
 
+//Promise Table
+// tableList().then((tablex) => {
+//     console.log(tablex)
+// })
 
 $(document).ready(function () {
 
