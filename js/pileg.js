@@ -231,7 +231,75 @@ function tableList(key) {
                 url: 'https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/' + kode_klik + '.json',
                 type: 'GET',
                 success: function (response) {
-                    console.log(response);
+                    // console.log(response);
+                    var c = Object.values(response)[3];
+                    $('.all-nama-caleg').html("")
+                    console.log('c', c);
+                    for (let key in c) {
+                        var monthWording = {
+                            '1': 'PKB',
+                            '2': 'Gerindra',
+                            '3': 'PDI P',
+                            '4': 'Golkar',
+                            '5': 'Nasdem',
+                            '6': 'Partai Buruh',
+                            '7': 'Gelora',
+                            '8': 'PKS',
+                            '9': 'PKN',
+                            '10': 'Hanura',
+                            '11': 'Garuda',
+                            '12': 'PAN',
+                            '13': 'PBB',
+                            '14': 'Demokrat',
+                            '15': 'PSI',
+                            '16': 'Perindo',
+                            '17': 'PPP',
+                            '24': 'Partai Ummat',
+                            'persen': 'Persen'
+                        }
+                        var suara_total = response.table[key].jml_suara_total;
+                        var suara_partai = response.table[key].jml_suara_partai;
+                        // console.log(response.table[key]);
+                        // console.log(suara_total);
+                        var keynama = Object.keys(response.table[key]);
+                        var keyangka = Object.values(response.table[key]);
+                        var cobaNama = `${monthWording[key]}`;
+
+                        $('.all-nama-caleg').append(`
+                            <div class="bungkus">
+                                <div>Partai: <b>${cobaNama}</b></div>
+                                <div>Jumlah Suara Total: <b>${suara_total}</b></div>
+                                <div>Jumlah Suara Partai: <b>${suara_partai}</b></div>
+                                <div>Nama: <span class="keynama" id="${keynama}" data-value="${keynama}">${keynama}</span></div>
+                                <div>Suaran: ${keyangka}</div>
+                            </div>
+                            
+                            
+                            
+                            `)
+
+
+                    }
+                }
+            })
+
+            $.ajax({
+                url: 'https://sirekap-obj-data.kpu.go.id/pemilu/caleg/partai/' + kode_klik + '.json',
+                type: 'GET',
+                success: function (response) {
+                    // console.log(response);
+                    var c = Object.values(response);
+                    // console.log(c);
+
+                    for (let key in c) {
+                        var angka = '100121';
+                        var a = response[key];
+                        console.log(a);
+                        // for (var b; b < a.length; b++) {
+                        //     var c = response[b].nama;
+                        //     console.log('c', c);
+                        // }
+                    }
                 }
             })
 
