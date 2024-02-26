@@ -146,84 +146,99 @@ $.ajax({
 var url_ = 'https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/0.json';
 
 //click table
-// function tableList() {
-// return new Promise(function (resolvetable) {
-$("#set").click(() => {
-    $.ajax({
-        url: url_,
-        type: 'GET',
-        success: function (response) {
+function tableList(key) {
+    // return new Promise(function (resolvetable) {
+    $("#set").click(() => {
+        $.ajax({
+            url: url_,
+            type: 'GET',
+            data: '{key: "' + key + '" }',
+            success: function (response) {
 
-            var semuaTable = [];
-            var allKey = [];
-            var allObj = [];
+                var semuaTable = [];
+                var allKey = [];
+                var allObj = [];
 
-            $('.partai').html('');
-            $('.suara').html('');
-            var c = Object.values(response)[2];
-            // console.log('c', c);
-            for (let key in c) {
-                var monthWording = {
-                    '1': 'PKB',
-                    '2': 'Gerindra',
-                    '3': 'PDI P',
-                    '4': 'Golkar',
-                    '5': 'Nasdem',
-                    '6': 'Partai Buruh',
-                    '7': 'Gelora',
-                    '8': 'PKS',
-                    '9': 'PKN',
-                    '10': 'Hanura',
-                    '11': 'Garuda',
-                    '12': 'PAN',
-                    '13': 'PBB',
-                    '14': 'Demokrat',
-                    '15': 'PSI',
-                    '16': 'Perindo',
-                    '17': 'PPP',
-                    '24': 'Partai Ummat',
-                    'persen': 'Persen'
-                }
-                // var key_ = c[key];
-                var cobaNama = `${monthWording[key]}`;
-                console.log('key_', cobaNama);
-                // semuaTable.push(table_dpr)
+                $('.partai .namax').html('');
+                $('.suara .suarx').html('');
 
-                // console.log(allKey, allObj);
-                $(".nama-nama .cardx .partai").append(`
-                    <div >${cobaNama}</div>
+                var c = Object.values(response)[2];
+                // console.log('c', c);
+                for (let key in c) {
+                    var monthWording = {
+                        '1': 'PKB',
+                        '2': 'Gerindra',
+                        '3': 'PDI P',
+                        '4': 'Golkar',
+                        '5': 'Nasdem',
+                        '6': 'Partai Buruh',
+                        '7': 'Gelora',
+                        '8': 'PKS',
+                        '9': 'PKN',
+                        '10': 'Hanura',
+                        '11': 'Garuda',
+                        '12': 'PAN',
+                        '13': 'PBB',
+                        '14': 'Demokrat',
+                        '15': 'PSI',
+                        '16': 'Perindo',
+                        '17': 'PPP',
+                        '24': 'Partai Ummat',
+                        'persen': 'Persen'
+                    }
+                    // var key_ = c[key];
+                    // console.log('key', key);
+                    var cobaNama = `${monthWording[key]}`;
+                    // console.log('key_', cobaNama);
+                    // semuaTable.push(table_dpr)
+
+                    // console.log(allKey, allObj);
+                    $(".nama-nama .cardx .partai .namax").append(`
+                    <div>${cobaNama}</div>
                 `)
 
-            }
+                }
 
-            var nilai = $('.daerah').find(":selected").val();
-            // var tablex = values.semuaTable[0];
-            // console.log('nilai', nilai);
+                var nilai = $('.daerah').find(":selected").val();
+                // var tablex = values.semuaTable[0];
+                // console.log('nilai', nilai);
 
-            var table_dpr = response.table[nilai];
-            //push table dpr
-            semuaTable.push(table_dpr);
-            var objVal = Object.values(table_dpr)
+                // resolvetable(nilai)
 
-            console.log('table dpr', objVal);
+                var table_dpr = response.table[nilai];
+                //push table dpr
+                semuaTable.push(table_dpr);
+                var objVal = Object.values(table_dpr)
 
-            var t;
-            for (t = 0; t < objVal.length; t++) {
-                var iterate_data = objVal[t];
-                $(".nama-nama .cardx .suara").append(`
+                // console.log('table dpr', objVal);
+
+                var t;
+                for (t = 0; t < objVal.length; t++) {
+                    var iterate_data = objVal[t].toLocaleString("id-ID");
+                    $(".nama-nama .cardx .suara .suarx").append(`
+                      
                         <div >${iterate_data}</div>
                 `)
+                }
+
+
+
             }
 
+        }).done(function (data) {
+            var kode_klik = ($('.daerah').val());
+            $.ajax({
+                url: 'https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/' + kode_klik + '.json',
+                type: 'GET',
+                success: function (response) {
+                    console.log(response);
+                }
+            })
 
-
-        }
-
+        })
     })
-
-})
-// })
-//}
+    // })
+}
 function cekChart() {
     var semuaObj = [];
     var semuaKey = [];
@@ -243,9 +258,6 @@ function cekChart() {
             // },
             success: ((response) => {
                 var c = Object.values(response)[2];
-
-
-
                 var x;
 
                 for (let key in c) {
@@ -292,10 +304,6 @@ function cekChart() {
 }
 
 // chartJS()
-
-
-
-
 //Promise chart
 cekChart().then((values) => {
     // console.log(values);
@@ -312,11 +320,25 @@ cekChart().then((values) => {
                 label: 'Suara',
                 data: values.semuaKey,
                 backgroundColor: [
-                    'rgb(255, 99, 132)',
-                    'rgb(54, 162, 235)',
-                    'rgb(255, 206, 86)',
-                    'rgb(75, 192, 192)',
-                    'rgb(153, 102, 255)'
+                    '#00764A',
+                    '#990001',
+                    '#D52027',
+                    '#FFF051',
+                    '#242464',
+                    '#FF6800',
+                    '#02CCFF',
+                    '#FC5100',
+                    '#FE0000',
+                    '#EE9B11',
+                    '#01274D',
+                    '#0054A3',
+                    '#00331C',
+                    '#004C9A',
+                    '#E62128',
+                    '#243E80',
+                    '#036302',
+
+                    '#000000'
                 ],
                 borderWidth: 1
             }]
@@ -332,9 +354,146 @@ cekChart().then((values) => {
     });
 });
 
-//Promise Table
-// tableList().then((tablex) => {
-//     console.log(tablex)
+// https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/1101.json - suara pileg
+// "table": {
+//     "1": {
+//     "100121": 66269,
+//     "100122": 23894,
+//     "100123": 2836,
+//     "100124": 5784,
+//     "100125": 22304,
+//     "100126": 4540,
+//     "100127": 11735,
+//     "jml_suara_total": 131365,
+//     "jml_suara_partai": 10031
+//     },
+
+
+// https://sirekap-obj-data.kpu.go.id/pemilu/caleg/partai/1101.json - nama caleg
+// "1": {
+//     "100121": {
+//     "nama": "H. IRMAWAN, S.Sos., M.M.",
+//     "nomor_urut": 1,
+//     "jenis_kelamin": "L",
+//     "tempat_tinggal": "KOTA BANDA ACEH"
+//     },
+// var suara_caleg = 'https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/1101.json'
+
+tableList()
+
+// tableList(function () {
+//     console.log('nilai', nilai);
+//     alert(1)
+//     $(".cek-nama").html("");
+//     $(".all-nama-caleg").html("");
+//     // $('.nama-nama').append(`
+//     //     <div class="text-center"><button class="btn btn-primary cek-nama my-3" id="${kodevalue}">Lihat Nama Caleg</button></div>
+//     // `);
+
+//     // $.ajax({
+//     //     url: 'https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/' + kodevalue + '.json',
+//     //     type: 'GET',
+//     //     success: function (response) {
+
+//     //         var c = Object.values(response)[3];
+//     //         // console.log('c', c);
+//     //         for (let key in c) {
+//     //             var monthWording = {
+//     //                 '1': 'PKB',
+//     //                 '2': 'Gerindra',
+//     //                 '3': 'PDI P',
+//     //                 '4': 'Golkar',
+//     //                 '5': 'Nasdem',
+//     //                 '6': 'Partai Buruh',
+//     //                 '7': 'Gelora',
+//     //                 '8': 'PKS',
+//     //                 '9': 'PKN',
+//     //                 '10': 'Hanura',
+//     //                 '11': 'Garuda',
+//     //                 '12': 'PAN',
+//     //                 '13': 'PBB',
+//     //                 '14': 'Demokrat',
+//     //                 '15': 'PSI',
+//     //                 '16': 'Perindo',
+//     //                 '17': 'PPP',
+//     //                 '24': 'Partai Ummat',
+//     //                 'persen': 'Persen'
+//     //             }
+//     //             var suara_total = response.table[key].jml_suara_total;
+//     //             var suara_partai = response.table[key].jml_suara_partai;
+//     //             var lihat_key = (Object.keys(response.table[key]));
+//     //             console.log(response.table[key]);
+//     //             // console.log(suara_total);
+//     //             var cobaNama = `${monthWording[key]}`;
+//     //             // console.log(cobaNama);
+//     //             $('.all-nama-caleg').append(`
+//     //             <div>Partai: <b>${cobaNama}</b></div>
+//     //             <div>Jumlah Suara Total: <b>${suara_total}</b></div>
+//     //             <div>Jumlah Suara Partai: <b>${suara_partai}</b></div>
+
+//     //             `)
+//     //         }
+
+//     //         //suara total
+//     //         var a;
+//     //         // for (a=0;a<response)
+
+
+//     //     }
+//     // })
+
+// }
+// )
+
+
+
+
+
+// tableList().then((namavalue) => {
+//     $.ajax({
+//         url: 'https://sirekap-obj-data.kpu.go.id/pemilu/caleg/partai/' + namavalue + '.json',
+//         type: 'GET',
+//         success: function (response) {
+//             // console.log(response);
+//             var c = Object.values(response);
+//             $(".dataxc").html('')
+//             // console.log(c);
+//             for (let key in c) {
+//                 var nama = response[key];
+//                 // console.log(nama);
+//                 // var suara_partai = response.table[key].jml_suara_partai;
+//                 $('.all-nama-caleg d-none').append(`
+//                     <div class="table dataxc">
+//                         <table class="table-responsive">
+//                             <thead>
+//                                 <tr>
+//                                     <th>Nama</th>
+//                                     <th>Suara</th>
+//                                 </tr>
+//                             </thead>
+//                             <tbody>
+//                                 <tr>
+
+//                                 </tr>
+//                             </tbody>
+//                         </table>
+//                     </div>
+
+//                 `)
+//             }
+
+//         }
+
+//     })
+
+
+// })
+// $.ajax({
+//     url: suara_caleg,
+//     type: 'GET',
+//     success: function (response) {
+//         console.log(response);
+//     }
 // })
 
 $(document).ready(function () {
