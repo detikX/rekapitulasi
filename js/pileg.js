@@ -261,7 +261,9 @@ function tableList(key) {
                         var suara_partai = response.table[key].jml_suara_partai;
                         // console.log(response.table[key]);
                         // console.log(suara_total);
+                        var newKey = [];
                         var keynama = Object.keys(response.table[key]);
+                        newKey.push(keynama)
                         var keyangka = Object.values(response.table[key]);
                         var cobaNama = `${monthWording[key]}`;
 
@@ -270,7 +272,7 @@ function tableList(key) {
                                 <div>Partai: <b>${cobaNama}</b></div>
                                 <div>Jumlah Suara Total: <b>${suara_total}</b></div>
                                 <div>Jumlah Suara Partai: <b>${suara_partai}</b></div>
-                                <div>Nama: <span class="keynama" id="${keynama}" data-value="${keynama}">${keynama}</span></div>
+                                <div>Nama: <span class="keynama" id="${newKey}" data-value="${newKey}">${newKey}</span></div>
                                 <div>Suaran: ${keyangka}</div>
                             </div>
                             
