@@ -238,7 +238,7 @@ function tableList(key) {
 
                     var c = Object.values(response)[3];
                     $('.all-nama-caleg').html("")
-                    console.log('c', c);
+                    // console.log('c', c);
                     for (let key in c) {
 
                         var monthWording = {
@@ -262,10 +262,13 @@ function tableList(key) {
                             '24': 'Partai Ummat',
                             'persen': 'Persen'
                         }
+
+                        var umum = response.table[key];
                         var suara_total = response.table[key].jml_suara_total.toLocaleString('id-ID');
                         var suara_partai = response.table[key].jml_suara_partai.toLocaleString('id-ID');
                         // console.log(response.table[key]);
-                        // console.log(suara_total);
+                        var lihatVal = Object.values(umum)
+                        console.log(lihatVal)
                         // var newKey = [];
                         // console.log(keyangka)
                         var cobaNama = `${monthWording[key]}`;
@@ -274,6 +277,7 @@ function tableList(key) {
                                 <div>Partai: <b>${cobaNama}</b></div>
                                 <div>Jumlah Suara Total: <b>${suara_total}</b></div>
                                 <div>Jumlah Suara Partai: <b>${suara_partai}</b></div>
+                                
                             </div>
                             
                             `)
