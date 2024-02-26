@@ -71,7 +71,7 @@ $.ajax({
         $(".daerah").css('cursor', 'pointer')
         $(".daerah").click(function () {
             var this_ = $(this).attr('id');
-            alert(this_)
+            // alert(this_)
         })
 
     }
@@ -231,11 +231,16 @@ function tableList(key) {
                 url: 'https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/' + kode_klik + '.json',
                 type: 'GET',
                 success: function (response) {
-                    // console.log(response);
+                    //ini contoh pkb
+                    var d = '1';
+                    // console.log(response.table);
+                    ///////
+
                     var c = Object.values(response)[3];
                     $('.all-nama-caleg').html("")
                     console.log('c', c);
                     for (let key in c) {
+
                         var monthWording = {
                             '1': 'PKB',
                             '2': 'Gerindra',
@@ -257,31 +262,43 @@ function tableList(key) {
                             '24': 'Partai Ummat',
                             'persen': 'Persen'
                         }
-                        var suara_total = response.table[key].jml_suara_total;
-                        var suara_partai = response.table[key].jml_suara_partai;
+                        var suara_total = response.table[key].jml_suara_total.toLocaleString('id-ID');
+                        var suara_partai = response.table[key].jml_suara_partai.toLocaleString('id-ID');
                         // console.log(response.table[key]);
                         // console.log(suara_total);
-                        var newKey = [];
-                        var keynama = Object.keys(response.table[key]);
-                        newKey.push(keynama)
-                        var keyangka = Object.values(response.table[key]);
+                        // var newKey = [];
+                        // console.log(keyangka)
                         var cobaNama = `${monthWording[key]}`;
-
                         $('.all-nama-caleg').append(`
                             <div class="bungkus">
                                 <div>Partai: <b>${cobaNama}</b></div>
                                 <div>Jumlah Suara Total: <b>${suara_total}</b></div>
                                 <div>Jumlah Suara Partai: <b>${suara_partai}</b></div>
-                                <div>Nama: <span class="keynama" id="${newKey}" data-value="${newKey}">${newKey}</span></div>
-                                <div>Suaran: ${keyangka}</div>
                             </div>
-                            
-                            
                             
                             `)
 
 
                     }
+                    // var objAngka = 
+                    // var table_dpr = response.table[nilai];
+                    // //push table dpr
+                    // semuaTable.push(table_dpr);
+                    // var objVal = Object.values(table_dpr)
+
+                    // // console.log('table dpr', objVal);
+
+                    // var t;
+                    // for (t = 0; t < objVal.length; t++) {
+                    //     var iterate_data = objVal[t].toLocaleString("id-ID");
+                    //     $(".nama-nama .cardx .suara .suarx").append(`
+
+                    //         <div >${iterate_data}</div>
+                    // `)
+                    // }
+
+                    // <div>Nama: <span class="keynama" id="${keynama}" data-value="${keynama}">${keynama}</span></div>
+                    // <div>Suaran: ${keyangka}</div>
                 }
             })
 
@@ -294,9 +311,10 @@ function tableList(key) {
                     // console.log(c);
 
                     for (let key in c) {
-                        var angka = '100121';
+                        // var angka = '100121';
                         var a = response[key];
-                        console.log(a);
+
+                        // console.log(a);
                         // for (var b; b < a.length; b++) {
                         //     var c = response[b].nama;
                         //     console.log('c', c);
