@@ -302,11 +302,19 @@ function tableList(key) {
                             w += `
                             <td>${c}</td>
                         ` }
-
-
-
                         );
-                        $('.ss').append(w)
+
+
+                        // console.log(response.table);
+
+                        // let tbody = $("<tbody></tbody>");
+
+                        // Object.keys(lihatVal).forEach(key => {
+                        //     // let nameId = name_id[key - 1];
+                        //     tbody.append("<tr><td>" + lihatKeys[key] + "</td><td>" + lihatVal[key] + "</td></tr>");
+                        // })
+                        // $('#datas').append(tbody);
+
                         // w.insertAfter("tbody tr");
                         //console.log('suara', w);
                         // $("tbody tr").append(`${w}`)
@@ -319,26 +327,11 @@ function tableList(key) {
                         // `)
 
                         // console.log($ul);
-                        $('.all-nama-caleg').append(`
+                        $('.all-nama-caleg d-none').append(`
                             <div class="bungkus">
                                 <div>Partai: <b>${cobaNama}</b></div>
                                 <div>Jumlah Suara Total: <b>${suara_total}</b></div>
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                Nama
-                                            </th>
-                                            <th>
-                                                Suara
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="datas">
-                                    
-                                        
-                                    </tbody>
-                                </table>
+                               
                            
                                 
                             </div>
