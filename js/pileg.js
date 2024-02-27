@@ -154,7 +154,7 @@ function tableList(key) {
             type: 'GET',
             data: '{key: "' + key + '" }',
             success: function (response) {
-
+                console.log(response.ts);
                 var semuaTable = [];
                 var allKey = [];
                 var allObj = [];
@@ -267,16 +267,79 @@ function tableList(key) {
                         var suara_total = response.table[key].jml_suara_total.toLocaleString('id-ID');
                         var suara_partai = response.table[key].jml_suara_partai.toLocaleString('id-ID');
                         // console.log(response.table[key]);
-                        var lihatVal = Object.values(umum)
-                        console.log(lihatVal)
-                        // var newKey = [];
+                        var lihatVal = Object.values(umum);
+                        // console.log(lihatVal)
+                        var lihatKeys = Object.keys(umum)
+                        // var arr = Object.keys(umum).map(function (key) { return umum[key]; });
+                        // console.log(lihatKeys)
                         // console.log(keyangka)
                         var cobaNama = `${monthWording[key]}`;
+                        var newKey = [];
+                        newKey.push({ lihatKeys, lihatVal })
+                        // console.log(newKey);
+
+
+
+                        // const countries = ['United States', 'Canada', 'Argentina', 'Armenia'];
+
+                        // var h = ""; elan
+                        // <ol class="list-benefit">
+                        //     ${h}
+                        // </ol>
+                        // lihatKeys.map((a, i) => { h += `<li>${a}</li>` });
+                        var d = ""
+                        lihatKeys.map((c, i) => {
+                            d += `<tr class="ss">
+                            <td>${c}</td></tr>
+                        ` });
+
+                        // console.log('nama', d);
+
+
+
+                        var w = ""
+                        lihatVal.map((c, i) => {
+                            w += `
+                            <td>${c}</td>
+                        ` }
+
+
+
+                        );
+                        $('.ss').append(w)
+                        // w.insertAfter("tbody tr");
+                        //console.log('suara', w);
+                        // $("tbody tr").append(`${w}`)
+
+                        // var tbody = "tbody";
+                        // var tr = $('<tr/>').appendTo(tbody);
+                        // var datac = tr.append(`
+                        // <td>${d}</td>
+                        // <td>${w}</td>
+                        // `)
+
+                        // console.log($ul);
                         $('.all-nama-caleg').append(`
                             <div class="bungkus">
                                 <div>Partai: <b>${cobaNama}</b></div>
                                 <div>Jumlah Suara Total: <b>${suara_total}</b></div>
-                                <div>Jumlah Suara Partai: <b>${suara_partai}</b></div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Nama
+                                            </th>
+                                            <th>
+                                                Suara
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="datas">
+                                    
+                                        
+                                    </tbody>
+                                </table>
+                           
                                 
                             </div>
                             
