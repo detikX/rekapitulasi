@@ -368,7 +368,7 @@ function tableList(key) {
                 success: function (response) {
                     // console.log(response);
                     var c = Object.values(response);
-                    // console.log(c);
+                    console.log(c);
 
                     for (let key in c) {
                         // var angka = '100121';
