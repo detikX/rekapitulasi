@@ -366,13 +366,48 @@ function tableList(key) {
                 url: 'https://sirekap-obj-data.kpu.go.id/pemilu/caleg/partai/' + kode_klik + '.json',
                 type: 'GET',
                 success: function (response) {
+
                     // console.log(response);
                     var c = Object.values(response);
-                    console.log(c);
+                    // console.log(c.length);
+                    var t = ""
+                    c.forEach(myFunction);
+
+                    function myFunction(key, value) {
+                        // t = c
+                        // t = c[key]
+
+                    }
+                    // console.log(c);
+
+                    Object.keys(c).forEach(key => {
+                        // let nameId = name_id[key - 1];
+                        // tbody.append("<tr><td>" + name_data[key][nameId].nama + "</td><td>" + total[key - 1] + "</td></tr>");
+                        var values = Object.values(c[key]);
+
+                        // var namax = values[key].nama
+                        // console.log(namax);
+                        console.log(values);
+                    })
+
+                    for (t = 0; t < c.length; t++) {
+                        // var test = c[t];
+                        // var keynya = Object.keys(test)
+                        // console.log(test);
+                        // console.log(keynya);
+                    }
+
+
+                    var a;
+                    for (a = 0; a < c.length; a++) {
+                        // var test = response[a].nama;
+                        // console.log(test);
+                    }
+
 
                     for (let key in c) {
                         // var angka = '100121';
-                        var a = response[key];
+                        // var a = response[key];
 
                         // console.log(a);
                         // for (var b; b < a.length; b++) {
