@@ -370,51 +370,65 @@ function tableList(key) {
                     // console.log(response);
                     var c = Object.values(response);
                     // console.log(c.length);
-                    var t = ""
-                    c.forEach(myFunction);
+                    var t = "";
 
-                    function myFunction(key, value) {
-                        // t = c
-                        // t = c[key]
+                    var dataxDiv = $(".all-nama-caleg")
+                    var html = '';
 
-                    }
+
+                    $.each(response, function (key, value) {
+                        var monthWording = {
+                            '1': 'PKB',
+                            '2': 'Gerindra',
+                            '3': 'PDI P',
+                            '4': 'Golkar',
+                            '5': 'Nasdem',
+                            '6': 'Partai Buruh',
+                            '7': 'Gelora',
+                            '8': 'PKS',
+                            '9': 'PKN',
+                            '10': 'Hanura',
+                            '11': 'Garuda',
+                            '12': 'PAN',
+                            '13': 'PBB',
+                            '14': 'Demokrat',
+                            '15': 'PSI',
+                            '16': 'Perindo',
+                            '17': 'PPP',
+                            '24': 'Partai Ummat',
+                        }
+                        // console.log(value);
+
+                        // var key_ = response[key];
+                        var cobaNama = `${monthWording[key]}`;
+                        console.log(cobaNama);
+
+
+                        html += '<div class="mb-3">';
+                        html += '<b>' + cobaNama + '</b>';
+
+                        $.each(value, function (subKey, subValue) {
+                            html += '<div class="nama">' + subValue["nama"] + ' - ' + subValue["tempat_tinggal"] + '</div>';
+                            // console.log(subValue["nama"]);
+                        });
+
+                        html += '</div>';
+                    });
+
+                    dataxDiv.html(html);
+
                     // console.log(c);
 
-                    Object.keys(c).forEach(key => {
-                        // let nameId = name_id[key - 1];
-                        // tbody.append("<tr><td>" + name_data[key][nameId].nama + "</td><td>" + total[key - 1] + "</td></tr>");
-                        var values = Object.values(c[key]);
-
-                        // var namax = values[key].nama
-                        // console.log(namax);
-                        console.log(values);
-                    })
-
-                    for (t = 0; t < c.length; t++) {
-                        // var test = c[t];
-                        // var keynya = Object.keys(test)
-                        // console.log(test);
-                        // console.log(keynya);
-                    }
-
-
-                    var a;
-                    for (a = 0; a < c.length; a++) {
-                        // var test = response[a].nama;
-                        // console.log(test);
-                    }
-
-
-                    for (let key in c) {
-                        // var angka = '100121';
-                        // var a = response[key];
-
-                        // console.log(a);
-                        // for (var b; b < a.length; b++) {
-                        //     var c = response[b].nama;
-                        //     console.log('c', c);
-                        // }
-                    }
+                    // Object.keys(c).forEach(key => {
+                    //     // let nameId = name_id[key - 1];
+                    //     var a
+                    //     // tbody.append("<tr><td>" + name_data[key][nameId].nama + "</td><td>" + total[key - 1] + "</td></tr>");
+                    //     var values = Object.values(c[key]);
+                    //     var keys = Object.keys(c[key]);
+                    //     a = c[key];
+                    //     // var entries = Object.entries(values)
+                    //     // console.log(values);
+                    // })
                 }
             })
 
