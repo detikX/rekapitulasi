@@ -408,7 +408,8 @@ function tableList(key) {
                         html += '<b>' + cobaNama + '</b>';
 
                         $.each(value, function (subKey, subValue) {
-                            html += '<div class="nama">' + subValue["nama"] + ' - ' + subValue["tempat_tinggal"] + '</div>';
+                            // html += '<div class="nama">' + subValue["nama"] + ' - ' + subValue["tempat_tinggal"] + '</div>';
+                            html += '<div class="nama">' + subValue["nama"] + '';
                             // console.log(subValue["nama"]);
                         });
 
