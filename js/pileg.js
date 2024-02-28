@@ -401,7 +401,7 @@ function tableList(key) {
 
                         // var key_ = response[key];
                         var cobaNama = `${monthWording[key]}`;
-                        // console.log(cobaNama);
+                        console.log(cobaNama);
 
 
                         html += '<div class="mb-3">';
