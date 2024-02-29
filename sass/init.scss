@@ -1,14 +1,14 @@
 // 003a70
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Alfa+Slab+One&family=Rowdies&family=Outfit:wght@400;700&family=Prompt:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=DM+Serif+Text&family=Rowdies&family=Outfit:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
 section {
     padding: 32px 0;
     // background: $red;
     min-height: 100vh;
     z-index: 11;
-    // background: #eee;
-    background: #b9e7f2;
+    background: rgba(#808e8a,.3);
+    // background: #b9e7f2;
     // background: linear-gradient(to bottom, #003a70, #b9e7f2);
     position: relative;
 
@@ -131,7 +131,7 @@ position: relative;
 height: 100%;
 // font-family: 'Outfit';
 // overflow-x: hidden;
-font-family: 'Poppins' !important;
+font-family: 'Montserrat' !important;
 @media screen and (max-width:768px) {
     // overflow-x: hidden;
 }
@@ -171,7 +171,7 @@ h4,h5 {
 .hello {
     width: 100%;
     height: auto;
-    background: linear-gradient(45deg, rgba(white,.7), rgba(white,.2));
+    background: linear-gradient(to top, rgba(white,.5), rgba(white,.2));
     border-radius: 16px;
     margin-bottom: 16px;
     .img {
