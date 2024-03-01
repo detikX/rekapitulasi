@@ -22,7 +22,7 @@ $(".category-airline").click(function () {
     var toShow = "#show-" + id;
     console.log(toShow);
     $(".airline-content").not(toShow).hide();
-    $(toShow).fadeIn("slow");
+    $(toShow).slideDown("slow");
     $(".twox").show();
 
     if ($(".detail-refund").children().hasClass("open")) {

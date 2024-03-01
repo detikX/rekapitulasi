@@ -140,6 +140,12 @@
     }
     .airline-content {
         display: none;
+        .nav {
+            display: block;
+            li {
+                display: inline-block;
+            }
+        }
         h3 {
             color: #2f3433;
             font-family: "DM Serif Text";
