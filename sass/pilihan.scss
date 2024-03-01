@@ -14,6 +14,9 @@
         font-weight: 900;
         font-family: "Roboto" !important;
         transition: 0.3s;
+        @media screen and (max-width: 768px) {
+            font-size: 1rem;
+        }
         &:hover {
             background: rgba(#808e8a, 0.3);
         }
@@ -107,11 +110,10 @@
                 }
             }
             @media screen and (max-width: 766px) {
-                // width: 160px;
-                width: 100%;
+                width: 32%;
                 text-align: center;
-                margin: 8px;
-                // font-size: 14px;
+                margin: 0;
+                padding: 0;
                 height: auto;
             }
             .airline-name {
@@ -138,6 +140,18 @@
     }
     .airline-content {
         display: none;
+        h3 {
+            color: #2f3433;
+            font-family: "DM Serif Text";
+            font-size: 2.5rem;
+        }
+
+        .kotak-peta {
+            width: 100%;
+            height: 360px;
+            border: 1px solid;
+            margin-bottom: 16px;
+        }
         &__icon {
             position: absolute;
             right: 0;

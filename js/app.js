@@ -67,10 +67,10 @@ $('.detail-refund ul li.category-detail').click(function () {
 
 $(".closer").click(() => {
     $(".airline-content").removeClass("open").addClass("close-info");
-    $(".twox").fadeOut();
+    // $(".twox").fadeOut();
     $(".airline-name").removeClass("bg-category");
     $(".airline-content") /*.fadeOut()*/
-        .fadeOut();
+        .slideUp();
     $("html, body").animate({
         scrollTop: $(".contentx").offset().top + 20,
     })
