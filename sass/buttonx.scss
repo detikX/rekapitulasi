@@ -24,12 +24,12 @@
     }
 }
 
-.buttonx:hover,
-.buttonx:focus {
+.buttonx:hover {
     background-color: #fff;
 }
 
-.buttonx:active {
+.buttonx:active,
+.buttonx:focus {
     box-shadow: #333 2px 2px 0 0;
     background-color: #fff;
     transform: translate(2px, 2px);
