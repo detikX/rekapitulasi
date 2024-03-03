@@ -97,9 +97,9 @@ new Chart(ctx, {
             label: 'Real Count',
             data: [58, 26, 16],
             backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(54, 162, 235)',
-                'rgb(255, 205, 86)'
+                'rgba(255, 99, 132,.4)',
+                'rgba(54, 162, 235,.4)',
+                'rgba(255, 205, 86,.4)'
             ],
             hoverOffset: 4
         }]
