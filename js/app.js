@@ -22,7 +22,7 @@ $(".category-airline").click(function () {
     var toShow = "#show-" + id;
     console.log(toShow);
     $(".airline-content").not(toShow).hide();
-    $(toShow).slideDown("slow");
+    $(toShow).fadeIn("slow");
     $(".twox").show();
 
     if ($(".detail-refund").children().hasClass("open")) {
@@ -80,3 +80,37 @@ $(".category-click .airline-name").click(function () {
     $(".category-click .airline-name").removeClass("bg-category");
     $(this).addClass("bg-category");
 });
+
+
+
+const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [
+            'Paslon 1',
+            'Paslon 2',
+            'Paslon 3'
+        ],
+        datasets: [{
+            label: 'Real Count',
+            data: [58, 26, 16],
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)'
+            ],
+            hoverOffset: 4
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+

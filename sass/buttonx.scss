@@ -1,0 +1,43 @@
+/* CSS */
+// #%422800xxxx
+.buttonx {
+    background-color: #fbeee0;
+    border: 2px solid #333;
+    border-radius: 30px;
+    box-shadow: #333 4px 4px 0 0;
+    color: #333;
+    cursor: pointer;
+    width: 100%;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 2rem;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    @media screen and (max-width: 768px) {
+        // width: ;
+        font-size: 1rem;
+    }
+}
+
+.buttonx:hover,
+.buttonx:focus {
+    background-color: #fff;
+}
+
+.buttonx:active {
+    box-shadow: #333 2px 2px 0 0;
+    background-color: #fff;
+    transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+    .buttonx {
+        // min-width: 120px;
+        padding: 0 25px;
+    }
+}
