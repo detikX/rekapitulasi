@@ -114,3 +114,30 @@ new Chart(ctx, {
     }
 });
 
+// $('#pilpres-daerah').on('click', function (event) {
+//     event.preventDefault()
+//     // alert(1)
+//     // // $(this).tab('show')
+// })
+setTimeout(() => {
+    // $(".pilpres_daerah").not('.slick-initialized').slick()
+
+}, 1000);
+$(document).ready(function () {
+    // ('.pilpres-daerah').slick('setPosition');
+    // $('.pilpres_daerah').resize();
+    // $('.pilpres_daerah').slick('unslick');
+
+    $('.pilpres_daerah').slick();
+});
+
+
+$('#pills-tab .nav-item button').on('click', function (e) {
+    // console.log(event);
+    // // ('.pilpres-daerah').slick('setPosition', 0);
+    // event.preventDefault()
+    // $(this).tab('show')
+    e.preventDefault();
+    $('.nav-link').removeClass('active');
+    $(this).tab('show');
+})
