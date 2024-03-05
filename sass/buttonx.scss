@@ -24,16 +24,16 @@
     }
 }
 
-.buttonx:hover {
-    background-color: #fff;
-}
+// .buttonx:hover {
+//     background-color: #fff;
+// }
 
-.buttonx:active,
-.buttonx:focus {
-    box-shadow: #333 2px 2px 0 0;
-    background-color: #fff;
-    transform: translate(2px, 2px);
-}
+// .buttonx:active,
+// .buttonx:focus {
+//     box-shadow: #333 2px 2px 0 0;
+//     background-color: #fff;
+//     transform: translate(2px, 2px);
+// }
 
 @media (min-width: 768px) {
     .buttonx {

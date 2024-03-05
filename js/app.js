@@ -69,11 +69,12 @@ $(".closer").click(() => {
     $(".airline-content").removeClass("open").addClass("close-info");
     // $(".twox").fadeOut();
     $(".airline-name").removeClass("bg-category");
+    $(".buttonx").removeClass('selected')
     $(".airline-content") /*.fadeOut()*/
         .slideUp();
-    $("html, body").animate({
-        scrollTop: $(".contentx").offset().top + 20,
-    })
+    // $("html, body").animate({
+    //     scrollTop: $(".contentx").offset().top + 20,
+    // })
 });
 
 $(".category-click .airline-name").click(function () {
