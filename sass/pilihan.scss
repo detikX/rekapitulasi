@@ -254,6 +254,7 @@
                 &-val {
                     display: inline-block;
                     width: 45%;
+                    font-weight: bold;
                     font-size: 16px;
                     @media screen and (max-width: 768px) {
                         // font-size: 9px;
@@ -310,6 +311,29 @@
             }
         }
         // transition: 0.3s;
+    }
+
+    .table {
+        td {
+            vertical-align: middle;
+            .img {
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+                vertical-align: middle;
+                // border-radius: 50%;
+                img {
+                    width: 100%;
+                    // border-radius: 50%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            &:last-child {
+                color: #333;
+                font-weight: bold;
+            }
+        }
     }
 }
 
