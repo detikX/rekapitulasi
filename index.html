@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="sass/bootstrap.min.css">
         <link rel="stylesheet" href="sass/slick-theme.css">
         <link rel="stylesheet" href="sass/slick.css">
+        <link rel="stylesheet" href="sass/font-awesome.css">
         <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"> -->
         <link rel="stylesheet" href="sass/style.css">
     </head>
@@ -215,6 +216,158 @@
                                 <h3>Pileg</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, ad minus? Deleniti suscipit eaque, numquam amet unde sunt eveniet repellendus aliquam soluta tempore excepturi facilis aperiam aliquid ipsam voluptate adipisci?</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eum corrupti inventore iusto cum eos quaerat? Consequatur, eligendi sapiente optio eius tempora recusandae excepturi officia temporibus possimus nisi. Et, laborum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic ea quas neque perspiciatis dolorem totam nihil molestias illo tempore amet corporis excepturi, dolores aperiam asperiores minus. Pariatur consectetur necessitatibus eaque?</p>
+                                <ul class="nav nav-pills mb-3" id="pills-tab-2" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button
+                                            class="nav-link active"
+                                            id="pileg-nasional-tab"
+                                            data-toggle="pill"
+                                            data-target="#pileg-nasional"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="pileg-nasional"
+                                            aria-selected="true"
+                                        >Nasional</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button
+                                            class="nav-link"
+                                            id="pileg-daerah-tab"
+                                            data-toggle="pill"
+                                            data-target="#pileg-daerah"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="pileg-daerah"
+                                            aria-selected="false"
+                                        >Daerah</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div
+                                        class="tab-pane fade show active"
+                                        id="pilpres-nasional"
+                                        role="tabpanel"
+                                        aria-labelledby="pilpres-nasional-tab"
+                                    >
+                                        <h3>Nasional</h3>
+                                        <div class="kotak-peta auto-mobile">
+                                            <div class="canv">
+                                                <canvas id="myChart"></canvas>
+                                            </div>
+                                        </div>
+                                        <div class="hasil">
+                                            <div class="fotonya">
+                                                <div class="imaged">
+                                                    <img src="img/1amin.JPG" alt="">
+                                                </div>
+                                                <div class="suara">
+                                                    <span class="jum">99</span>
+                                                    <span class="small">%</span>
+                                                </div>
+                                            </div>
+                                            <div class="fotonya">
+                                                <div class="imaged">
+                                                    <img src="img/2pragib.JPG" alt="">
+                                                </div>
+                                                <div class="suara">
+                                                    <span class="jum">99</span>
+                                                    <span class="small">%</span>
+                                                </div>
+                                            </div>
+                                            <div class="fotonya">
+                                                <div class="imaged">
+                                                    <img src="img/3gama.JPG" alt="">
+                                                </div>
+                                                <div class="suara">
+                                                    <span class="jum">99</span>
+                                                    <span class="small">%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="tab-pane fade"
+                                        id="pilpres-daerah"
+                                        role="tabpanel"
+                                        aria-labelledby="pilpres-daerah-tab"
+                                    >
+                                        <h3>Daerah</h3>
+                                        <div class="pilpres_daerah">
+                                            <div class="pilpres-daerah-wrap">
+                                                <div class="kotak-peta">
+                                                    <div class="image sumatera">
+                                                        <img src="img/sumatera-test.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="provinsi">
+                                                    <div class="provinsi__name">
+                                                        Aceh
+                                                    </div>
+                                                    <div class="provinsi__name">
+                                                        Sumatera Barat
+                                                    </div>
+                                                    <div class="provinsi__name">
+                                                        Sumatera Utara
+                                                    </div>
+                                                    <div class="provinsi__name">
+                                                        Riau
+                                                    </div>
+                                                    <div class="provinsi__name">
+                                                        Jambi
+                                                    </div>
+                                                    <div class="provinsi__name">
+                                                        Bengkulu
+                                                    </div>
+                                                    <div class="provinsi__name">
+                                                        Sumatera Selatan
+                                                    </div>
+                                                    <div class="provinsi__name">
+                                                        Lampung
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pilpres-daerah-wrap">
+                                                <div class="kotak-peta">
+                                                    <div class="image sumatera">
+                                                        <img src="img/sumatera-test.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="provinsi">
+                                                    <div class="provinsi__name">
+                                                        Aceh
+                                                    </div>
+                                                    <div class="provinsi__name">
+                                                        Sumatera Barat
+                                                    </div>
+                                                    <div class="provinsi__name">
+                                                        Sumatera Utara
+                                                    </div>
+                                                    <div class="provinsi__name">
+                                                        Riau
+                                                    </div>
+                                                    <div class="provinsi__name">
+                                                        Jambi
+                                                    </div>
+                                                    <div class="provinsi__name">
+                                                        Bengkulu
+                                                    </div>
+                                                    <div class="provinsi__name">
+                                                        Sumatera Selatan
+                                                    </div>
+                                                    <div class="provinsi__name">
+                                                        Lampung
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="tab-pane fade"
+                                        id="pills-contact"
+                                        role="tabpanel"
+                                        aria-labelledby="pills-contact-tab"
+                                    >...</div>
+                                </div>
                                 <div class="closer">Tutup</div>
                             </div>
                             <div class="airline-content close-info" id="show-dpd">
