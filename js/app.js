@@ -20,7 +20,7 @@
 $(".category-airline").click(function () {
     var id = $(this).attr("id");
     var toShow = "#show-" + id;
-    console.log(toShow);
+    // console.log(toShow);
     $(".airline-content").not(toShow).hide();
     $(toShow).fadeIn("slow");
     $(".twox").show();
@@ -129,6 +129,8 @@ $(document).ready(function () {
     // $('.pilpres_daerah').slick('unslick');
 
     $('.pilpres_daerah').slick();
+
+
 });
 
 
@@ -147,3 +149,8 @@ $('#pills-tab .nav-item button').on('shown.bs.tab', function (e) {
 //     $('.nav-link').removeClass('active');
 //     $(this).tab('show');
 // })
+
+$('.category-click .category-airline .buttonx').on('click', function () {
+    $('.buttonx').removeClass('selected');
+    $(this).addClass('selected');
+});
