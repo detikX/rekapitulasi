@@ -132,12 +132,18 @@ $(document).ready(function () {
 });
 
 
-$('#pills-tab .nav-item button').on('click', function (e) {
-    // console.log(event);
-    // // ('.pilpres-daerah').slick('setPosition', 0);
-    // event.preventDefault()
-    // $(this).tab('show')
-    e.preventDefault();
-    $('.nav-link').removeClass('active');
-    $(this).tab('show');
-})
+$('#pills-tab .nav-item button').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+    $('.pilpres_daerah').slick('setPosition');
+});
+
+// $('#pills-tab .nav-item button').on('click', function (e) {
+//     // console.log(event);
+//     // // ('.pilpres-daerah').slick('setPosition', 0);
+//     // event.preventDefault()
+//     // $(this).tab('show')
+//     e.preventDefault();
+//     $('.nav-link').removeClass('active');
+//     $(this).tab('show');
+// })
