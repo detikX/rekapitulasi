@@ -294,6 +294,26 @@
                         left: 80%;
                     }
                 }
+                &.jawa {
+                    left: 25%;
+                    top: -25%;
+                    transform: scale(2);
+                    @media screen and (max-width: 768px) {
+                        left: 25%;
+                        top: -25%;
+                        transform: scale(2.5);
+                    }
+                }
+                &.bali-nusra {
+                    // left: 25%;
+                    top: -20%;
+                    transform: scale(2);
+                    @media screen and (max-width: 768px) {
+                        // left: 25%;
+                        top: -25%;
+                        transform: scale(3);
+                    }
+                }
                 img {
                     width: 100%;
                     height: 100%;
