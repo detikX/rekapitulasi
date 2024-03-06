@@ -165,9 +165,17 @@ $('.kategori-item').click(function (event) {
     $(toShow).fadeIn();
 });
 
+$(".closes").click(function () {
+    $(".dashboard-content").hide()
+})
+
 // $(".to-peta").click(function () {
 //     $('html,body').animate({
 //         scrollTop: $(".mapsx").offset().top
 //     },
 //         600);
 // })
+
+$('.kategori-item').onclick = function () {
+    $(this).focus();
+};

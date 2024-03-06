@@ -205,8 +205,16 @@
                 text-align: center;
                 text-transform: uppercase;
                 // background: white;
+                border-color: transparent;
                 background: #2f3433;
+                transition: 0.3s;
                 color: white;
+                &:focus,
+                &:hover {
+                    background: white;
+                    color: #2f3433;
+                    border-color: #2f3433;
+                }
                 @media screen and (max-width: 768px) {
                     margin: 4px;
                 }
@@ -246,7 +254,7 @@
 
                 text-align: center;
                 @media screen and (max-width: 768px) {
-                    width: 50%;
+                    width: 75%;
                     // padding: 4px;
                 }
                 .cek {
@@ -260,7 +268,7 @@
                     @media screen and (max-width: 768px) {
                         // font-size: 9px;
                         // width: 20%;
-                        font-size: 12px;
+                        font-size: 14px;
                     }
                 }
             }
@@ -364,4 +372,15 @@
 
 .selected {
     background-color: white !important;
+}
+
+.closes {
+    position: absolute;
+    right: 0px;
+    top: -32px;
+    cursor: pointer;
+    color: rgba(#333, 0.5);
+    i {
+        font-size: 1.5rem;
+    }
 }
