@@ -155,3 +155,19 @@ $('.category-click .category-airline .buttonx').on('click', function () {
     $('.buttonx').removeClass('selected');
     $(this).addClass('selected');
 });
+
+
+$('.kategori-item').click(function (event) {
+    var id = $(this).attr('id');
+    var toShow = '#show-' + id;
+
+    $('.dashboard-content').not(toShow).hide();
+    $(toShow).fadeIn();
+});
+
+// $(".to-peta").click(function () {
+//     $('html,body').animate({
+//         scrollTop: $(".mapsx").offset().top
+//     },
+//         600);
+// })
