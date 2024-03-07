@@ -90,9 +90,9 @@ new Chart(ctx, {
     type: 'bar',
     data: {
         labels: [
-            'Anies-Muhaimin',
-            'Prabowo-Gibran',
-            'Ganjar-Mahfud'
+            'Paslon 1',
+            'Paslon 2',
+            'Paslon 3'
         ],
         datasets: [{
             label: 'Total Suara',
@@ -113,31 +113,31 @@ new Chart(ctx, {
     options: {
         responsive: true,
         indexAxis: 'y',
-        plugins: {
-            title: {
-                display: true,
-                text: "Real Count KPU",
-                color: "black",
-                font: {
-                    family: "'Montserrat'", // Your font family
-                    size: 20,
-                    weight: "bold",
-                },
+        // plugins: {
+        //     title: {
+        //         display: true,
+        //         text: "Real Count KPU",
+        //         color: "black",
+        //         font: {
+        //             family: "'Montserrat'", // Your font family
+        //             size: 20,
+        //             weight: "bold",
+        //         },
 
-                padding: {
-                    top: 10,
-                    bottom: 30,
-                },
-            },
-            legend: {
-                position: "bottom",
-                labels: {
-                    font: {
-                        family: "'Montserrat'",
-                    },
-                },
-            },
-        },
+        //         padding: {
+        //             top: 10,
+        //             bottom: 30,
+        //         },
+        //     },
+        //     legend: {
+        //         position: "bottom",
+        //         labels: {
+        //             font: {
+        //                 family: "'Montserrat'",
+        //             },
+        //         },
+        //     },
+        // },
 
         animations: {
             x: {
@@ -153,24 +153,24 @@ new Chart(ctx, {
 
             y: {
                 beginAtZero: true,
-                title: {
-                    display: true,
-                    color: "black",
-                    text: "Pasangan Calon",
-                    font: {
-                        family: "'Montserrat'", // Your font family
-                        size: 14,
-                        weight: "bold",
-                    },
-                    padding: 20,
-                },
-                ticks: {
-                    color: "black",
-                    font: {
-                        family: "'Montserrat'", // Your font family
-                        size: 14,
-                    },
-                },
+                // title: {
+                //     display: true,
+                //     color: "black",
+                //     text: "Pasangan Calon",
+                //     font: {
+                //         family: "'Montserrat'", // Your font family
+                //         size: 14,
+                //         weight: "bold",
+                //     },
+                //     padding: 20,
+                // },
+                // ticks: {
+                //     color: "black",
+                //     font: {
+                //         family: "'Montserrat'", // Your font family
+                //         size: 14,
+                //     },
+                // },
             },
         }
     }
