@@ -418,7 +418,8 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                backdrop-filter: blur(8px);
+                // backdrop-filter: blur(8px);
+                background: linear-gradient(45deg, #cfcfcf, #fff);
                 right: 0;
                 height: fit-content;
                 color: black;
@@ -427,10 +428,12 @@
                 border-radius: 0 0 16px 16px;
                 .nama {
                     font-size: 0.8rem;
+                    text-transform: uppercase;
                 }
                 .prov,
                 .total {
                     font-size: 0.8rem;
+                    font-weight: normal;
                 }
             }
             .image {
