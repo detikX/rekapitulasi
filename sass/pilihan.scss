@@ -419,7 +419,7 @@
                 bottom: 0;
                 left: 0;
                 // backdrop-filter: blur(8px);
-                background: linear-gradient(45deg, #cfcfcf, #fff);
+                background: linear-gradient(45deg, rgba(#cfcfcf, 0.8), rgba(#fff, 0.8));
                 right: 0;
                 height: fit-content;
                 color: black;
@@ -429,11 +429,17 @@
                 .nama {
                     font-size: 0.8rem;
                     text-transform: uppercase;
+                    @media screen and (max-width: 768px) {
+                        font-size: 0.6rem;
+                    }
                 }
                 .prov,
                 .total {
                     font-size: 0.8rem;
                     font-weight: normal;
+                    @media screen and (max-width: 768px) {
+                        font-size: 0.6rem;
+                    }
                 }
             }
             .image {
