@@ -261,6 +261,9 @@
                 &.kepri {
                     top: 60%;
                 }
+                &.kali {
+                    top: 75%;
+                }
                 @media screen and (max-width: 768px) {
                     width: 75%;
                     // padding: 4px;
@@ -311,6 +314,25 @@
                     @media screen and (max-width: 768px) {
                         // left: 25%;
                         top: -25%;
+                        transform: scale(3);
+                    }
+                }
+                &.kalimantan {
+                    left: 0;
+                }
+                &.maluku {
+                    left: -32%;
+                    transform: scale(1.6);
+                    @media screen and (max-width: 768px) {
+                        left: -50%;
+                        transform: scale(2.5);
+                    }
+                }
+                &.papua {
+                    left: -30%;
+                    // transform: scale(2.6);
+                    @media screen and (max-width: 768px) {
+                        left: -100%;
                         transform: scale(3);
                     }
                 }
