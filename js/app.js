@@ -90,27 +90,88 @@ new Chart(ctx, {
     type: 'bar',
     data: {
         labels: [
-            'Paslon 1',
-            'Paslon 2',
-            'Paslon 3'
+            'Anies-Muhaimin',
+            'Prabowo-Gibran',
+            'Ganjar-Mahfud'
         ],
         datasets: [{
-            label: 'Real Count',
-            data: [58, 26, 16],
+            label: 'Total Suara',
+            data: [50.55, 50.55, 50.55],
             backgroundColor: [
-                'rgba(255, 99, 132,.4)',
-                'rgba(54, 162, 235,.4)',
-                'rgba(255, 205, 86,.4)'
+                'rgba(255, 205, 86,.6)',
+                'rgba(54, 162, 235,.6)',
+                'rgba(255, 99, 132,.6)'
+            ],
+            borderColor: [
+                'rgba(255, 205, 86,1)',
+                'rgba(54, 162, 235,1)',
+                'rgba(255, 99, 132,1)'
             ],
             hoverOffset: 4
         }]
     },
     options: {
+        responsive: true,
         indexAxis: 'y',
-        scales: {
+        plugins: {
+            title: {
+                display: true,
+                text: "Real Count KPU",
+                color: "black",
+                font: {
+                    family: "'Montserrat'", // Your font family
+                    size: 20,
+                    weight: "bold",
+                },
+
+                padding: {
+                    top: 10,
+                    bottom: 30,
+                },
+            },
+            legend: {
+                position: "bottom",
+                labels: {
+                    font: {
+                        family: "'Montserrat'",
+                    },
+                },
+            },
+        },
+
+        animations: {
+            x: {
+                duration: 5000,
+                from: 0
+            },
             y: {
-                beginAtZero: true
+                duration: 3000,
+                from: 500
             }
+        },
+        scales: {
+
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    color: "black",
+                    text: "Pasangan Calon",
+                    font: {
+                        family: "'Montserrat'", // Your font family
+                        size: 14,
+                        weight: "bold",
+                    },
+                    padding: 20,
+                },
+                ticks: {
+                    color: "black",
+                    font: {
+                        family: "'Montserrat'", // Your font family
+                        size: 14,
+                    },
+                },
+            },
         }
     }
 });
