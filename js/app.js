@@ -112,7 +112,7 @@ new Chart(ctx, {
     },
     options: {
         responsive: true,
-        indexAxis: 'y',
+        // indexAxis: 'y',
         // plugins: {
         //     title: {
         //         display: true,
