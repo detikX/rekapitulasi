@@ -200,15 +200,20 @@ $(document).ready(function () {
 $('#pills-tab .nav-item button').on('shown.bs.tab', function (e) {
     e.target
     e.relatedTarget
-    $('.pilpres_daerah').slick('setPosition');
+    setTimeout(() => {
+        $('.pilpres_daerah').slick('setPosition');
+    }, 10);
+    
     
 });
 
 $('#pills-tab-2 .nav-item button').on('shown.bs.tab', function (e) {
     e.target
     e.relatedTarget
+    setTimeout(() => {
+        $('.pileg_daerah').slick('setPosition');
+    }, 10);
     
-    $('.pileg_daerah').slick('setPosition');
 });
 
 // $('#pills-tab .nav-item button').on('click', function (e) {
