@@ -28,9 +28,12 @@ section {
     }
     p,
     li {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        @media screen and (max-width:768px) {
+            font-size: 1.1rem;
+        }
         @media screen and (max-width: 400px) {
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
     }
     // @media screen and (min-width:1600px) {
