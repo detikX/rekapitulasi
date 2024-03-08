@@ -233,6 +233,7 @@ $('.kategori-item').click(function (event) {
 
     $('.dashboard-content').not(toShow).hide();
     $(toShow).fadeIn();
+    $(".info-klik").hide()
 });
 
 $(".closes").click(function () {
