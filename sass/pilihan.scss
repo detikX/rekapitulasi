@@ -124,13 +124,16 @@
     .closer {
         cursor: pointer;
         text-align: center;
-        /* border: 1px solid; */
         width: fit-content;
+        /* background: azure; */
         margin: 0 auto;
-        border-radius: 8px;
+        border-radius: 16px;
         padding: 2px 8px;
         transition: 0.2s;
-        background: rgba(255, 255, 255, 0.1);
+        box-shadow: #646464 2px 2px 0 0;
+        /* outline: black; */
+        background: rgba(255,255,255,0.8);
+        border: 2px solid #646464;
         &:hover {
             background: rgba(255, 255, 255, 0.2);
         }
