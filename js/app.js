@@ -190,16 +190,10 @@ $(document).ready(function () {
     // $('.pilpres_daerah').resize();
     // $('.pilpres_daerah').slick('unslick');
 
-    var sliderx1 = $('.pilpres_daerah').slick();
+    $('.pilpres_daerah').slick();
     $('.pileg_daerah').slick();
 
-    sliderx1.on('afterChange', function(event, slick, currentSlide){
-        // slick - is a slider object with a lot of useful info
-        // currentSlide - is a current slide index (starts from 0)
-        if( slick.slideCount === currentSlide + 1 ){
-          slick.paused = true;
-        }
-      });
+
 
 
 });
