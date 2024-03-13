@@ -196,6 +196,7 @@ $(document).ready(function () {
 
 
 
+
 });
 
 
@@ -204,7 +205,7 @@ $('#pills-tab .nav-item button').on('shown.bs.tab', function (e) {
     e.relatedTarget
     setTimeout(() => {
         $('.pilpres_daerah').slick('setPosition');
-    }, 1000);
+    }, 500);
     
     
 });
@@ -214,7 +215,7 @@ $('#pills-tab-2 .nav-item button').on('shown.bs.tab', function (e) {
     e.relatedTarget
     setTimeout(() => {
         $('.pileg_daerah').slick('setPosition');
-    }, 1000);
+    }, 500);
     
 });
 
