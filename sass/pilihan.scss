@@ -136,7 +136,7 @@
         transition: 0.2s;
         box-shadow: #646464 2px 2px 0 0;
         /* outline: black; */
-        background: rgba(255,255,255,0.8);
+        background: rgba(255, 255, 255, 0.8);
         border: 2px solid #646464;
         &:hover {
             background: rgba(255, 255, 255, 0.2);
@@ -204,7 +204,7 @@
             display: block;
             //titip: #d69e5e
             h4 {
-                font-family: 'Montserrat', sans-serif !important;
+                font-family: "Montserrat", sans-serif !important;
             }
             &__name {
                 display: inline-block;
@@ -291,7 +291,7 @@
                                 display: inline-block;
                                 height: 40px;
                                 vertical-align: middle;
-                                @media screen and (max-width:768px) {
+                                @media screen and (max-width: 768px) {
                                     width: 30px;
                                     height: 30px;
                                 }
@@ -301,26 +301,25 @@
                                     object-fit: contain;
                                 }
                             }
-        
+
                             .presentase {
                                 display: inline-block;
                                 vertical-align: middle;
-                                font-size: .8rem;
+                                font-size: 0.8rem;
                                 font-weight: bold;
-                                @media screen and (max-width:768px) {
-                                    font-size: .7rem;
+                                @media screen and (max-width: 768px) {
+                                    font-size: 0.7rem;
                                 }
                             }
                         }
                     }
-                    
                 }
                 &-val {
                     display: inline-block;
                     width: 45%;
                     font-weight: bold;
                     font-size: 16px;
-                   
+
                     @media screen and (max-width: 768px) {
                         // font-size: 9px;
                         // width: 20%;
@@ -534,8 +533,29 @@
 
 .info-klik {
     width: fit-content;
-    background: rgba(220 ,174 ,128 , 50%);
+    background: rgba(220, 174, 128, 50%);
     padding: 0px 8px;
     border-radius: 8px;
     font-size: 14px;
+}
+
+.ul-cat {
+    display: block;
+    padding: 0;
+    li {
+        display: inline-block;
+        margin-right: 8px;
+        border: 2px solid;
+        background: white;
+        padding: 4px 16px;
+        border-radius: 29px;
+        cursor: pointer;
+        font-weight: 700;
+        &:hover {
+            background: rgba(#ffddb7, 0.4);
+        }
+        &.activeMenu {
+            background: #ffddb7;
+        }
+    }
 }

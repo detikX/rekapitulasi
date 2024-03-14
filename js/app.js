@@ -58,6 +58,8 @@ $('.detail-refund ul li.category-detail').click(function () {
     var toShow = '#show-' + id;
     $('.wrapper-box').not(toShow).hide();
     $(toShow).fadeIn().removeAttr('hidden');
+    $('.pilpres_daerah').slick('setPosition');
+    $('.pileg_daerah').slick('setPosition');
 });
 
 $('.detail-refund ul li.category-detail').click(function () {
@@ -190,6 +192,8 @@ $(document).ready(function () {
     // $('.pilpres_daerah').resize();
     // $('.pilpres_daerah').slick('unslick');
 
+    // $('.pileg_daerah').slick('unslick');
+    // $('.pilpres_daerah').slick('unslick');
     $('.pilpres_daerah').slick();
     $('.pileg_daerah').slick();
 
@@ -204,10 +208,11 @@ $('#pills-tab .nav-item button').on('shown.bs.tab', function (e) {
     e.target
     e.relatedTarget
     setTimeout(() => {
+        $(".nav-tabs:first-child").addClass("active")
         $('.pilpres_daerah').slick('setPosition');
     }, 100);
-    
-    
+
+
 });
 
 $('#pills-tab-2 .nav-item button').on('shown.bs.tab', function (e) {
@@ -216,7 +221,7 @@ $('#pills-tab-2 .nav-item button').on('shown.bs.tab', function (e) {
     setTimeout(() => {
         $('.pileg_daerah').slick('setPosition');
     }, 100);
-    
+
 });
 
 // $('#pills-tab .nav-item button').on('click', function (e) {
