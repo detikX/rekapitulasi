@@ -11,13 +11,16 @@
         transform: translate(-50%, -50%);
         width: 80%;
         text-align: center;
+        @media screen and (max-width: 768px) {
+            width: 95%;
+        }
         .imgz {
             width: 30%;
             height: 250px;
             display: inline-block;
             border: 2px solid;
             @media screen and (max-width: 768px) {
-                height: 120px;
+                height: 150px;
                 width: 32%;
             }
             img {
