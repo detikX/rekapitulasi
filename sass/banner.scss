@@ -95,7 +95,7 @@
 
     @keyframes slide {
         0% {
-            left: 0;
+            left: -50px;
             top: 0;
         }
         50% {
@@ -130,7 +130,7 @@
                 width: 70px;
                 height: 100%;
                 z-index: 2;
-                left: 0;
+                left: -50px;
                 animation-timing-function: ease-in-out;
                 animation-delay: 0.3s;
                 animation-iteration-count: infinite;
