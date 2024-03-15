@@ -1,6 +1,6 @@
 // 003a70
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=DM+Serif+Text&family=Rowdies&family=Outfit:wght@400;700&family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=DM+Serif+Text&family=Rowdies&family=Rubik:wght@400;700&family=Montserrat:wght@400;700&display=swap");
 
 section {
     padding: 32px 0;
@@ -30,7 +30,7 @@ section {
     p,
     li {
         font-size: 1.1rem;
-        @media screen and (max-width:768px) {
+        @media screen and (max-width: 768px) {
             font-size: 1.1rem;
         }
         @media screen and (max-width: 400px) {
