@@ -97,7 +97,7 @@ new Chart(ctx, {
             'Paslon 3'
         ],
         datasets: [{
-            label: 'Total Suara',
+            label: 'Total Suara (%)',
             data: [50.55, 50.55, 50.55],
             backgroundColor: [
                 'rgba(255, 205, 86,.6)',

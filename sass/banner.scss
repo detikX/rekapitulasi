@@ -1,7 +1,7 @@
 .banner {
     background: linear-gradient(to bottom, #a6abad, #fafafa);
     @media screen and (max-width: 768px) {
-        min-height: 60vh;
+        min-height: 75vh;
     }
 
     .alt-img {
@@ -55,8 +55,8 @@
         width: 90%;
         text-align: center;
         // background: white;
-        @media screen and (max-width: 75%) {
-            top: 75%;
+        @media screen and (max-width: 766px) {
+            top: 70%;
         }
         h2 {
             font-size: 3.5rem;
