@@ -4,9 +4,35 @@
         min-height: 75vh;
     }
 
+    .helps {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            // height: 30vh;
+            top: 0;
+            background: linear-gradient(to top, #fafafa, rgba(#fafafa, 0.3));
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
     .alt-img {
         position: absolute;
         left: 50%;
+        z-index: 2;
         top: 50%;
         transform: translate(-50%, -50%);
         width: 80%;
@@ -46,21 +72,80 @@
     //     z-index: 1;
     //     background: linear-gradient(to bottom, #c4c7c6, #fafafa);
     // }
+
+    $duration: 5s;
+    $text-color: rgba(255, 255, 255, 0.3);
+    $bgr-color: #333;
+
+    @keyframes shine {
+        0%,
+        10% {
+            background-position: -1000px;
+        }
+        20% {
+            background-position: top left;
+        }
+        90% {
+            background-position: top right;
+        }
+        100% {
+            background-position: 1000px;
+        }
+    }
+
+    @keyframes slide {
+        0% {
+            left: 0;
+            top: 0;
+        }
+        50% {
+            left: 120px;
+            top: 0px;
+        }
+        100% {
+            left: 1200px;
+            top: 0;
+        }
+    }
     .title {
         position: absolute;
         left: 50%;
         z-index: 2;
-        top: 80%;
+        top: 77%;
         transform: translate(-50%, -50%);
         width: 90%;
         text-align: center;
+
         // background: white;
         @media screen and (max-width: 766px) {
             top: 70%;
         }
         h2 {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                animation-name: slide;
+                animation-duration: 5s;
+                width: 70px;
+                height: 100%;
+                z-index: 2;
+                left: 0;
+                animation-timing-function: ease-in-out;
+                animation-delay: 0.3s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                background: linear-gradient(
+                    to right,
+                    rgba(255, 255, 255, 0.13) 0%,
+                    rgba(255, 255, 255, 0.13) 77%,
+                    rgba(255, 255, 255, 0.5) 92%,
+                    rgba(255, 255, 255, 0) 100%
+                );
+            }
             font-size: 3.5rem;
-            color: #2f3433;
+            // color: transparent;
+            // color: #2f3433;
             // font-family: 'Roboto' !important;
             font-family: "Rubik" !important;
             @media screen and (max-width: 768px) {
