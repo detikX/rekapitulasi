@@ -549,6 +549,7 @@
 .ul-cat {
     display: block;
     padding: 0;
+   
     li {
         display: inline-block;
         margin-right: 8px;
@@ -570,4 +571,10 @@
 
 .col-red {
     color: #e73a3a !important;
+}
+
+::marker { 
+    // color: red;
+    font-size: .8rem;
+
 }
