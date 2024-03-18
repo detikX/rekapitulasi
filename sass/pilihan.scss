@@ -553,7 +553,7 @@
         display: inline-block;
         margin-right: 8px;
         border: 2px solid;
-        background: white;
+        background: rgba(#ffddb7, 0.4);
         padding: 4px 16px;
         border-radius: 29px;
         cursor: pointer;
@@ -562,7 +562,8 @@
             background: rgba(#ffddb7, 0.4);
         }
         &.activeMenu {
-            background: #ffddb7;
+            // background: #ffddb7;
+            background: white;
         }
     }
 }
