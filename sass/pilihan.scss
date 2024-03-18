@@ -581,5 +581,17 @@
 
 .controller {
     margin-bottom: 16px;
-    border-bottom: 1px dashed #bbb;
+    background:
+    linear-gradient(
+      to left, 
+      rgba(#fafafa,1) 0%,
+      rgba(#bbb,1) 12%,
+      rgba(#ccc,1) 47%,
+      rgba(#fafafa,1) 100%
+    )
+    left 
+    bottom
+    #fafafa  
+    no-repeat; 
+  background-size:100% 2px ;
 }
