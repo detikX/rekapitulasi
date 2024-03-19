@@ -549,7 +549,7 @@
 .ul-cat {
     display: block;
     padding: 0;
-   
+
     li {
         display: inline-block;
         margin-right: 8px;
@@ -573,25 +573,30 @@
     color: #e73a3a !important;
 }
 
-::marker { 
+::marker {
     // color: red;
-    font-size: .8rem;
-
+    font-size: 0.8rem;
 }
 
 .controller {
     margin-bottom: 16px;
-    background:
-    linear-gradient(
-      to left, 
-      rgba(#fafafa,1) 0%,
-      rgba(#bbb,1) 12%,
-      rgba(#ccc,1) 47%,
-      rgba(#fafafa,1) 100%
-    )
-    left 
-    bottom
-    transparent  
-    no-repeat; 
-  background-size:100% 2px ;
+    background: linear-gradient(
+            to left,
+            rgba(#fafafa, 1) 0%,
+            rgba(#bbb, 1) 12%,
+            rgba(#ccc, 1) 47%,
+            rgba(#fafafa, 1) 100%
+        )
+        left bottom transparent no-repeat;
+    background-size: 100% 2px;
+}
+
+.credit-point {
+    min-height: auto;
+    .kontribusi {
+        margin-bottom: 8px;
+        .title {
+            font-weight: bold;
+        }
+    }
 }
