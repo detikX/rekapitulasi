@@ -579,16 +579,11 @@
 }
 
 .controller {
-    margin-bottom: 16px;
-    background: linear-gradient(
-            to left,
-            rgba(#fafafa, 1) 0%,
-            rgba(#bbb, 1) 12%,
-            rgba(#ccc, 1) 47%,
-            rgba(#fafafa, 1) 100%
-        )
-        left bottom transparent no-repeat;
+    margin-bottom: 24px;
+    background: linear-gradient(to left, #fafafa 0%, #bbbbbb 12%, #cccccc 47%, #fafafa 100%) left bottom transparent
+        no-repeat;
     background-size: 100% 2px;
+    padding: 8px 0 16px;
 }
 
 .credit-point {
