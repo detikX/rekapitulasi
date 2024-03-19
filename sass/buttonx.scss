@@ -20,7 +20,9 @@
     touch-action: manipulation;
     @media screen and (max-width: 768px) {
         // width: ;
-        font-size: 1rem;
+        padding: 0 8px;
+        line-height: 35px;
+        font-size: 1.2rem;
     }
 }
 
