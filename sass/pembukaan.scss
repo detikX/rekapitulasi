@@ -1,3 +1,34 @@
 .pembukaan {
     min-height: auto;
+    .image {
+        width: 100%;
+        height: 360px;
+        position: relative;
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 0;
+        //     right: 0;
+        //     height: 100px;
+        //     background: linear-gradient(to top, #fafafa, transparent);
+        // }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.credit {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.25;
+}
+
+.namax {
+    font-size: 12px;
+    color: #777;
+    font-weight: bold;
 }
