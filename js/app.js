@@ -15,6 +15,24 @@
 //     markers: false,
 // })
 
+$(document).ready(function () {
+    // ('.pilpres-daerah').slick('setPosition');
+    // $('.pilpres_daerah').resize();
+    // $('.pilpres_daerah').slick('unslick');
+
+    // $('.pileg_daerah').slick('unslick');
+    new WOW().init();
+    // $('.pilpres_daerah').slick('unslick');
+    $('.pilpres_daerah').slick();
+    $('.pileg_daerah').slick();
+
+
+
+
+
+});
+
+
 
 
 $(".category-airline").click(function () {
@@ -187,21 +205,6 @@ setTimeout(() => {
     // $(".pilpres_daerah").not('.slick-initialized').slick()
 
 }, 1000);
-$(document).ready(function () {
-    // ('.pilpres-daerah').slick('setPosition');
-    // $('.pilpres_daerah').resize();
-    // $('.pilpres_daerah').slick('unslick');
-
-    // $('.pileg_daerah').slick('unslick');
-    // $('.pilpres_daerah').slick('unslick');
-    $('.pilpres_daerah').slick();
-    $('.pileg_daerah').slick();
-
-
-
-
-
-});
 
 
 $('#pills-tab .nav-item button').on('shown.bs.tab', function (e) {
