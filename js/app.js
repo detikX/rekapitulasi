@@ -17,10 +17,14 @@
 
 $(document).ready(function () {
     // ('.pilpres-daerah').slick('setPosition');
-    $(window).on("load", function () {
-        $(".preloader").fadeOut(10000);
+    // $(window).on("load", function () {
+    // });
+
+    setTimeout(() => {
+        $(".preloader").fadeOut(1000);
         $(".preloader").remove();
-    });
+
+    }, 1500);
     // $('.pilpres_daerah').resize();
     // $('.pilpres_daerah').slick('unslick');
 
