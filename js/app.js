@@ -24,7 +24,7 @@ $(document).ready(function () {
         $(".preloader").fadeOut(1000);
         $(".preloader").remove();
 
-    }, 1500);
+    }, 1000);
     // $('.pilpres_daerah').resize();
     // $('.pilpres_daerah').slick('unslick');
 
