@@ -554,16 +554,18 @@
     li {
         display: inline-block;
         margin-right: 8px;
-        border: 2px solid;
         background: white;
         padding: 4px 16px;
         border-radius: 29px;
         cursor: pointer;
         font-weight: 700;
+        border: 2px solid;
         &:hover {
-            background: white;
+            // background: white;
+            background: #ffd9b2;
         }
         &.activeMenu {
+            border: 2px solid;
             // background: #ffddb7;
             // background: white;
             background: #ffd9b2;
