@@ -2,6 +2,63 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=DM+Serif+Text&family=Bakbak+One&family=Libre+Franklin:wght@400;900&family=Montserrat:wght@400;700&display=swap");
 
+.preloader {
+    position: fixed;
+    top: 0;
+    // display: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    // filter: blur(8px);
+    background: rgba($color: #fff, $alpha: 1);
+    .waiting {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+    }
+    .animate {
+        -webkit-animation-duration: 1.5s;
+        animation-duration: 1.5s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-name: bounce;
+        animation-name: bounce;
+    }
+
+    @-webkit-keyframes bounce {
+        0%,
+        100% {
+            -webkit-transform: translateX(0);
+        }
+
+        50% {
+            -webkit-transform: translateX(-10px);
+        }
+    }
+
+    @keyframes bounce {
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(-10px);
+        }
+    }
+
+    .bounce {
+        -webkit-animation-name: bounce;
+        animation-name: bounce;
+    }
+}
+
 section {
     padding: 32px 0;
     // background: $red;
