@@ -49,7 +49,7 @@ $(".category-airline").click(function () {
                 scrollTop: $(".refund").offset().top + 20
             });
         });
-        console.log("harus fade")
+        // console.log("harus fade")
     }
 
     if ($(".detail-refund").children().hasClass("close-info")) {
@@ -61,7 +61,7 @@ $(".category-airline").click(function () {
                     scrollTop: $(".refund").offset().top + 20,
                 });
             });
-        console.log("harus slide");
+        // console.log("harus slide");
     }
 
     $('.detail-refund ul li.category-detail').removeClass("activeMenu");
