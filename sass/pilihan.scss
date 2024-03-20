@@ -168,7 +168,7 @@
             .fotonya {
                 .suara {
                     .jum {
-                        font-size: 2rem;
+                        font-size: 1.5rem;
                         font-weight: bold;
                         @media screen and (max-width: 766px) {
                             font-size: 1rem;
@@ -179,9 +179,9 @@
                     }
                     .small {
                         font-size: 1rem;
-                        font-weight: bold;
+                        // font-weight: bold;
                         @media screen and (max-width: 768px) {
-                            font-size: 0.7rem;
+                            font-size: 0.6rem;
                             font-weight: normal;
                         }
                         // font
