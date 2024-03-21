@@ -125,6 +125,8 @@ new Chart(ctx, {
         datasets: [{
             label: 'Total Suara (%)',
             data: [24.94, 58.58, 16.46],
+            borderWidth: 2,
+            borderRadius: 5,
             backgroundColor: [
                 'rgba(255, 205, 86,.6)',
                 'rgba(54, 162, 235,.6)',
