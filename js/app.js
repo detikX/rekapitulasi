@@ -203,7 +203,8 @@ new Chart(ctx, {
                 // },
             },
         }
-    }
+    },
+    plugins: [ChartDataLabels],
 });
 
 // $('#pilpres-daerah').on('click', function (event) {

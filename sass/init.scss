@@ -11,7 +11,8 @@
     right: 0;
     z-index: 999999;
     // filter: blur(8px);
-    background: rgba($color: #000, $alpha: 1);
+    background: linear-gradient(to bottom, rgba(black, 0.75), black);
+    backdrop-filter: blur(12px);
     .waiting {
         position: absolute;
         transform: translate(-50%, -50%);
