@@ -273,12 +273,60 @@
                 text-align: center;
                 &.jambi {
                     top: 24%;
+                    &.papuax {
+                        left: 30%;
+                        top: 35%;
+                        @media screen and (max-width: 768px) {
+                            left: 50%;
+                        }
+                        &.barat-daya {
+                            @media screen and (max-width: 768px) {
+                                left: 50%;
+                                top: 75%;
+                            }
+                        }
+                        &.sedikit {
+                            left: 40%;
+                        }
+                    }
                 }
                 &.lampung {
                     top: 40%;
                 }
+                &.pulau-atas {
+                    left: 70%;
+                    &.sedikit {
+                        left: 60%;
+                    }
+                    @media screen and (max-width: 768px) {
+                        top: 75%;
+                        left: 50%;
+                    }
+                }
+                &.pulau-bawah {
+                    top: 35%;
+                    left: 75%;
+                    @media screen and (max-width: 768px) {
+                        top: 30%;
+                        left: 60%;
+                    }
+                    &.sedikit {
+                        left: 60%;
+                    }
+                }
                 &.kepri {
                     top: 60%;
+                    &.sulutx {
+                        @media screen and (max-width: 768px) {
+                            top: 75%;
+                        }
+                    }
+                    &.barat-daya {
+                        @media screen and (max-width: 768px) {
+                            left: 50%;
+                            top: 75%;
+                        }
+                    }
                 }
                 &.kali {
                     top: 75%;
@@ -292,6 +340,10 @@
                     ol {
                         text-align: left;
                         column-count: 2;
+                        margin-bottom: 0;
+                        @media screen and (max-width: 768px) {
+                            padding-left: 8px;
+                        }
                         li {
                             margin-bottom: 8px;
                             .partai {
@@ -355,7 +407,7 @@
                     transform: scale(2);
                     @media screen and (max-width: 768px) {
                         left: 25%;
-                        top: -25%;
+                        top: -14%;
                         transform: scale(2.5);
                     }
                 }
@@ -370,7 +422,16 @@
                     }
                 }
                 &.kalimantan {
-                    left: 0;
+                    left: -8%;
+                    @media screen and (max-width: 768px) {
+                        left: 0;
+                    }
+                }
+                &.sulawesi {
+                    left: -16%;
+                    @media screen and (max-width: 768px) {
+                        top: 16%;
+                    }
                 }
                 &.maluku {
                     left: -32%;
@@ -386,6 +447,7 @@
                     @media screen and (max-width: 768px) {
                         left: -100%;
                         transform: scale(3);
+                        top: 8%;
                     }
                 }
                 img {
