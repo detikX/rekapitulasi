@@ -3,6 +3,42 @@
     @media screen and (max-width: 768px) {
         min-height: 75vh;
     }
+    .height-help {
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: none;
+        right: 0;
+        z-index: 32;
+        width: 100%;
+        height: 60px;
+        background: green;
+    }
+    .bendera {
+        // display: none;
+        @media screen and (max-width:768px) {
+            position: absolute;
+            top: -8%;
+            left: -8%;
+            right: 0;
+            width: 120%;
+            height: auto;
+            z-index: 2;
+            
+        }
+        position: absolute;
+        top: -18%;
+        left: -8%;
+        right: 0;
+        width: 110%;
+        height: auto;
+        z-index: 2;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
 
     .helps {
         position: absolute;
