@@ -41,7 +41,10 @@ $(document).ready(function () {
 });
 
 
-
+setTimeout(() => {
+    $("#pilpres").click();
+    $("#pilpres").children().addClass('selected')
+}, 100);
 
 $(".category-airline").click(function () {
     var id = $(this).attr("id");

@@ -260,7 +260,6 @@
                 filter: grayscale(0);
                 animation: kelap 1s linear infinite;
                 transform: scale(1.4);
-                
             }
             .datax {
                 position: absolute;
@@ -274,8 +273,8 @@
                 text-align: center;
                 &.baswedan {
                     &::after {
-                        background-image: url(../img/alt-anies.png);    
-                    }    
+                        background-image: url(../img/alt-anies.png);
+                    }
                 }
                 &::after {
                     content: "";
@@ -689,7 +688,15 @@
     }
 }
 
-
 .aniesx {
     color: orangered !important;
+}
+
+.pileg_daerah {
+    .datax {
+        &::after {
+            content: "";
+            background: initial !important;
+        }
+    }
 }
