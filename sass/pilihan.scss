@@ -277,17 +277,17 @@
                         background-image: url(../img/alt-anies.png);    
                     }    
                 }
-                &::after {
-                    content: "";
-                    position: absolute;
-                    width: 60%;
-                    top: -60%;
-                    right: 0px;
-                    background-image: url(../img/alt-pra.png);
-                    height: 60%;
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                }
+                // &::after {
+                //     content: "";
+                //     position: absolute;
+                //     width: 60%;
+                //     top: -60%;
+                //     right: 0px;
+                //     background-image: url(../img/alt-pra.png);
+                //     height: 60%;
+                //     background-size: contain;
+                //     background-repeat: no-repeat;
+                // }
                 &.jambi {
                     top: 35%;
 
