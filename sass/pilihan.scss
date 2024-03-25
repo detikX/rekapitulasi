@@ -557,6 +557,9 @@
                 .total {
                     font-size: 0.8rem;
                     font-weight: normal;
+                    &::after {
+                        content: " Suara";
+                    }
                     @media screen and (max-width: 768px) {
                         font-size: 0.6rem;
                     }
