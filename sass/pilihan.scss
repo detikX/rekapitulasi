@@ -260,6 +260,7 @@
                 filter: grayscale(0);
                 animation: kelap 1s linear infinite;
                 transform: scale(1.4);
+                
             }
             .datax {
                 position: absolute;
@@ -271,6 +272,22 @@
                 padding: 8px;
                 border-radius: 16px;
                 text-align: center;
+                &.baswedan {
+                    &::after {
+                        background-image: url(../img/alt-anies.png);    
+                    }    
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 60%;
+                    top: -60%;
+                    right: 0px;
+                    background-image: url(../img/alt-pra.png);
+                    height: 60%;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
                 &.jambi {
                     top: 35%;
 
@@ -645,7 +662,7 @@
 }
 
 .col-red {
-    color: #e73a3a !important;
+    color: #45b1dd;
 }
 
 ::marker {
@@ -669,4 +686,9 @@
             font-weight: bold;
         }
     }
+}
+
+
+.aniesx {
+    color: orangered !important;
 }
