@@ -613,6 +613,7 @@
 .closes {
     position: absolute;
     right: 0px;
+    z-index: 16;
     top: -20px;
     cursor: pointer;
     color: rgba(#333, 0.5);
