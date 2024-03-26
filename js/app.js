@@ -129,9 +129,9 @@ new Chart(ctx, {
     type: 'bar',
     data: {
         labels: [
-            'Paslon 1',
-            'Paslon 2',
-            'Paslon 3'
+            'Anies-Muhaimin',
+            'Prabowo-Gibran',
+            'Ganjar-Mahfud'
         ],
         datasets: [{
             label: 'Total Suara (%)',
