@@ -696,7 +696,7 @@
 
 .pileg_daerah {
     .datax {
-        background: white;
+        background: white !important;
         &::after {
             content: "";
             background: initial !important;
