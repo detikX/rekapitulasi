@@ -23,6 +23,8 @@ $(document).ready(function () {
     setTimeout(() => {
         $(".preloader").fadeOut(1000);
         $(".preloader").remove();
+        // $("html, body").animate({ scrollTop: 0 }, 10);
+        window.scrollTo(0, 0);
 
     }, 2000);
     // $('.pilpres_daerah').resize();
@@ -44,7 +46,7 @@ $(document).ready(function () {
 setTimeout(() => {
     $("#pilpres").click();
     $("#pilpres").children().addClass('selected')
-}, 100);
+}, 10);
 
 $(".category-airline").click(function () {
     var id = $(this).attr("id");
