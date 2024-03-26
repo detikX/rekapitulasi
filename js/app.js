@@ -36,6 +36,12 @@ $(document).ready(function () {
     $('.pilpres_daerah').slick();
     $('.pileg_daerah').slick();
 
+    $(".field").click(function () {
+        $('html, body').animate({
+            scrollTop: $(".pembukaan").offset().top
+        }, 500);
+    })
+
 
 
 
