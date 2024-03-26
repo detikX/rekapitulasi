@@ -267,11 +267,13 @@
                 top: 50%;
                 transform: translate(-50%, -50%);
                 width: 50%;
-                background: rgba(white, 0.85);
+                // background: rgba(white, 0.85);
+                background: rgba(170, 226, 249, 0.8);
                 padding: 8px;
                 border-radius: 16px;
                 text-align: center;
                 &.baswedan {
+                    background: rgba($color: white, $alpha: 0.8);
                     &::after {
                         background-image: url(../img/alt-anies.png);
                     }
@@ -662,7 +664,7 @@
 }
 
 .col-red {
-    color: #45b1dd;
+    color: #0045ff !important;
 }
 
 ::marker {
@@ -694,6 +696,7 @@
 
 .pileg_daerah {
     .datax {
+        background: white;
         &::after {
             content: "";
             background: initial !important;
