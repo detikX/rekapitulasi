@@ -15,6 +15,14 @@
 //     markers: false,
 // })
 
+
+
+$(".field").click(function () {
+    $('html, body').animate({
+        scrollTop: $(".pembukaan").offset().top
+    }, 500);
+})
+
 $(document).ready(function () {
     // ('.pilpres-daerah').slick('setPosition');
     // $(window).on("load", function () {
@@ -33,14 +41,7 @@ $(document).ready(function () {
     // $('.pileg_daerah').slick('unslick');
     new WOW().init();
     // $('.pilpres_daerah').slick('unslick');
-    $('.pilpres_daerah').slick();
-    $('.pileg_daerah').slick();
 
-    $(".field").click(function () {
-        $('html, body').animate({
-            scrollTop: $(".pembukaan").offset().top
-        }, 500);
-    })
 
 
 
@@ -51,8 +52,72 @@ $(document).ready(function () {
 
 setTimeout(() => {
     $("#pilpres").click();
-    $("#pilpres").children().addClass('selected')
+    $("#pilpres").children().addClass('selected');
 }, 10);
+
+
+
+setTimeout(() => {
+    $('.pilpres_daerah').slick('setPosition');
+    $('.pileg_daerah').slick('setPosition');
+
+}, 2000);
+
+
+// var item_length = $('.slide > div').length - 1;
+// var seconds =
+
+// $('.pilpres_daerah').slick()
+// $('.pileg_daerah').slick()
+$('.pilpres_daerah').slick({
+    autoplay: true,
+    autoplaySpeed: 1000,
+    speed: 1000,
+})
+$('.pileg_daerah').slick({
+    autoplay: true,
+    autoplaySpeed: 1000,
+    speed: 1000
+});
+
+$(".haha").click(function () {
+    $('.pilpres_daerah').slick('slickPause');
+    // $('.pileg_daerah').slick('slickPause');
+    // alert(1)
+    $(".haha").hide()
+})
+
+$(".hahad").click(function () {
+    // $('.pilpres_daerah').slick('slickPause');
+    $('.pileg_daerah').slick('slickPause');
+    // alert(1)
+    $(".hahad").hide()
+})
+
+// setTimeout(() => {
+//     $('.pilpres_daerah').slick('slickPause');
+// }, 1000);
+
+// 
+// const myInterval = setInterval(myTimer, 1000);
+
+// function myTimer() {
+//     var test = 100;
+//     var testx = 8000;
+
+
+// }
+
+// clearInterval(myInterval);
+
+
+// $('.pilpres_daerah').slick();
+// $('.pileg_daerah').slick();
+
+setTimeout(() => {
+
+}, 2000);
+
 
 $(".category-airline").click(function () {
     var id = $(this).attr("id");
@@ -95,8 +160,15 @@ $('.detail-refund ul li.category-detail').click(function () {
     var toShow = '#show-' + id;
     $('.wrapper-box').not(toShow).hide();
     $(toShow).fadeIn().removeAttr('hidden');
-    $('.pilpres_daerah').slick('setPosition');
-    $('.pileg_daerah').slick('setPosition');
+    // setTimeout(() => {
+    //     $('.pilpres_daerah').slick('setPosition');
+
+    // }, 100);
+
+    // setTimeout(() => {
+
+    //     $('.pileg_daerah').slick('setPosition');
+    // }, 100);
 });
 
 $('.detail-refund ul li.category-detail').click(function () {
@@ -288,3 +360,4 @@ $(".closes").click(function () {
 $('.kategori-item').onclick = function () {
     $(this).focus();
 };
+
