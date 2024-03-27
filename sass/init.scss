@@ -3,7 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=DM+Serif+Text&family=Rubik&family=Noto+Serif+JP&family=Libre+Franklin:wght@400;900&family=Montserrat:wght@400;700&display=swap");
 
 .preload {
-    font-family: "Noto Serif JP", sans-serif;
+    // font-family: "Noto Serif JP", sans-serif;
+    font-family: "Rubik";
     // color: rgb(58, 58, 58);
     color: black;
     border-bottom: 1px dashed #bbb;
@@ -117,7 +118,8 @@ section {
     }
     p,
     li {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        color: #333;
         @media screen and (max-width: 768px) {
             font-size: 1.1rem;
         }
@@ -390,11 +392,14 @@ section {
     background: white;
     border-radius: 16px;
     padding: 0px 8px;
+    position: absolute;
+    top: 165px;
+    right: 0;
     @media screen and (max-width: 768px) {
         display: none;
         color: #333;
     }
     &:hover {
-        background: #ce9352;
+        background: rgba(#ce9352, 0.5);
     }
 }
