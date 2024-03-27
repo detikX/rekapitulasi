@@ -383,3 +383,90 @@ section {
     display: none;
     // color: red;
 }
+
+#nav.no_index,
+#share {
+    z-index: 21;
+}
+
+.footer {
+    z-index: 22;
+}
+
+.share_icon > a i {
+    font-size: 25px !important;
+    line-height: initial !important;
+    @media screen and (max-width: 766px) {
+        font-size: 16px !important;
+        line-height: initial !important;
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+
+#nav {
+    // background: rgb(105 84 29 / 80%) !important;
+    background: rgb(80, 80, 80, 0.6) !important;
+    backdrop-filter: blur(11px);
+    @media screen and (max-width: 766px) {
+        // backdrop-filter: initial;
+        background: rgb(80, 80, 80, 0.6) !important;
+    }
+}
+.bg-blues {
+    background: #fafafa !important;
+}
+
+.share_icon > a {
+    padding: 0 !important;
+}
+
+.baca-detikx {
+    .bacajuga_box {
+        display: initial !important;
+        .container {
+            display: none;
+        }
+    }
+    .bacajuga {
+        width: 100% !important;
+        display: block;
+        a {
+            display: inline-block;
+            padding: 0px;
+            width: 47% !important;
+            margin: 0 8px;
+            border-radius: 24px;
+            filter: drop-shadow(2px 4px 6px black);
+            position: relative;
+            height: 320px;
+            text-align: left;
+            &::after {
+                border-radius: 24px;
+            }
+            @media screen and (max-width: 766px) {
+                width: 100% !important;
+                margin: 4px 0;
+            }
+            &:hover {
+                text-decoration: none;
+                color: orange !important;
+            }
+            article {
+                position: absolute;
+                top: initial;
+                /* transform: translateY(-50%); */
+                width: 100%;
+                background: linear-gradient(to top, black, transparent);
+                padding: 8px 16px;
+                border-radius: 24px;
+                bottom: 0;
+                transform: initial;
+                h2 {
+                    font-family: "Prompt" !important;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
