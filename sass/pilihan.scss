@@ -254,12 +254,12 @@
                     filter: grayscale(0);
                 }
                 50% {
-                    filter: grayscale(0.8);
+                    filter: grayscale(1);
                 }
             }
             .test-img {
                 filter: grayscale(0);
-                animation: kelap 1s linear infinite;
+                animation: kelap 1.5s linear infinite;
                 transform: scale(1.4);
             }
             .datax {
