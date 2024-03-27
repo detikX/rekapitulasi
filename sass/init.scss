@@ -392,6 +392,7 @@ section {
     padding: 0px 8px;
     @media screen and (max-width: 768px) {
         display: none;
+        color: #333;
     }
     &:hover {
         background: #ce9352;
